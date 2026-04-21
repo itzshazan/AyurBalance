@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base Application Theme -->
+    <style name="Theme.AyurBalance" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorPrimaryDark">@color/primary_green_dark</item>
+        <item name="colorAccent">@color/primary_green_light</item>
+        <item name="android:windowBackground">@color/surface_cream</item>
+    </style>
+
+    <!-- Splash Screen Theme — matching beige background for seamless launch -->
+    <style name="Theme.AyurBalance.Splash" parent="Theme.AyurBalance">
+        <item name="android:windowBackground">@color/splash_background</item>
+    </style>
+
+    <!-- Onboarding Theme — dark hero at top with beige content below -->
+    <style name="Theme.AyurBalance.Onboarding" parent="Theme.AyurBalance">
+        <item name="android:windowBackground">@color/splash_bottom_bg</item>
+    </style>
+
+    <!-- Auth Theme — consistent beige with onboarding -->
+    <style name="Theme.AyurBalance.Auth" parent="Theme.AyurBalance">
+        <item name="android:windowBackground">@color/splash_bottom_bg</item>
+    </style>
+
+    <!-- OTP digit input box style -->
+    <style name="OtpBoxStyle">
+        <item name="android:background">@drawable/bg_otp_box</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textColor">@color/text_heading_dark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:importantForAutofill">yes</item>
+    </style>
+
+</resources>

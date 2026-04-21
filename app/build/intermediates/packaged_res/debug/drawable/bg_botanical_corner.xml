@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp"
+    android:height="140dp"
+    android:viewportWidth="140"
+    android:viewportHeight="140">
+
+    <!-- Stem 1 — tall curved branch -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C8B89A"
+        android:strokeWidth="1.2"
+        android:pathData="M95,140 Q100,100 90,70 Q85,50 95,30 Q100,20 105,10" />
+
+    <!-- Leaf 1 — drooping left -->
+    <path
+        android:fillColor="#D4C8B0"
+        android:fillAlpha="0.35"
+        android:pathData="M90,70 Q75,60 68,68 Q75,75 90,70Z" />
+
+    <!-- Leaf 2 — right side -->
+    <path
+        android:fillColor="#C4B89C"
+        android:fillAlpha="0.30"
+        android:pathData="M95,55 Q110,45 115,52 Q108,60 95,55Z" />
+
+    <!-- Leaf 3 — lower left -->
+    <path
+        android:fillColor="#D0C4A8"
+        android:fillAlpha="0.25"
+        android:pathData="M92,90 Q78,82 72,88 Q80,96 92,90Z" />
+
+    <!-- Stem 2 — shorter branch -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C8B89A"
+        android:strokeWidth="0.8"
+        android:pathData="M110,130 Q112,105 108,85 Q105,72 110,60" />
+
+    <!-- Leaf 4 — on second stem -->
+    <path
+        android:fillColor="#D4C8B0"
+        android:fillAlpha="0.30"
+        android:pathData="M108,85 Q120,78 124,84 Q118,92 108,85Z" />
+
+    <!-- Leaf 5 — small top -->
+    <path
+        android:fillColor="#C8BC9E"
+        android:fillAlpha="0.25"
+        android:pathData="M95,35 Q84,28 80,34 Q86,40 95,35Z" />
+
+    <!-- Small dots - dried herb seeds -->
+    <path
+        android:fillColor="#C8B89A"
+        android:fillAlpha="0.3"
+        android:pathData="M73.5,55 a1.5,1.5 0 1,0 3,0 a1.5,1.5 0 1,0 -3,0" />
+    <path
+        android:fillColor="#C8B89A"
+        android:fillAlpha="0.3"
+        android:pathData="M118.5,70 a1.5,1.5 0 1,0 3,0 a1.5,1.5 0 1,0 -3,0" />
+    <path
+        android:fillColor="#C8B89A"
+        android:fillAlpha="0.25"
+        android:pathData="M80.8,95 a1.2,1.2 0 1,0 2.4,0 a1.2,1.2 0 1,0 -2.4,0" />
+
+</vector>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/graph_vitality_line">
+
+    <!-- Draw the graph line from left to right -->
+    <target
+        android:name="graphLine"
+        android:animation="@animator/graph_line_draw" />
+
+    <!-- Fade in the area fill beneath the curve -->
+    <target
+        android:name="graphFill"
+        android:animation="@animator/graph_fill_fade" />
+
+    <!-- Pop in the peak dot at the end -->
+    <target
+        android:name="graphDot"
+        android:animation="@animator/graph_dot_appear" />
+
+</animated-vector>

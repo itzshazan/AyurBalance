@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Green left accent bar -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#2D5F1B" />
+        </shape>
+    </item>
+    <!-- Card body offset to show left bar -->
+    <item android:left="5dp">
+        <shape android:shape="rectangle">
+            <corners
+                android:topRightRadius="16dp"
+                android:bottomRightRadius="16dp"
+                android:topLeftRadius="12dp"
+                android:bottomLeftRadius="12dp" />
+            <solid android:color="#E8F5E0" />
+        </shape>
+    </item>
+</layer-list>

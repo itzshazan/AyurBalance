@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="100dp"
+    android:viewportWidth="280"
+    android:viewportHeight="100">
+
+    <!-- Subtle area fill beneath the curve (starts invisible) -->
+    <path
+        android:name="graphFill"
+        android:fillAlpha="0"
+        android:fillColor="#1A2D5F1B"
+        android:pathData="M0,68 C15,62 35,65 47,68 C59,71 78,76 93,78 C111,80 128,76 140,70 C155,62 172,45 187,32 C204,20 220,12 240,8 C260,5 275,4 280,4 L280,100 L0,100 Z" />
+
+    <!-- Graph line (starts with trimPathEnd=0 for draw animation) -->
+    <path
+        android:name="graphLine"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,68 C15,62 35,65 47,68 C59,71 78,76 93,78 C111,80 128,76 140,70 C155,62 172,45 187,32 C204,20 220,12 240,8 C260,5 275,4 280,4"
+        android:strokeColor="#2D5F1B"
+        android:strokeWidth="2.5"
+        android:trimPathEnd="0" />
+
+    <!-- Peak dot at the end (starts invisible) -->
+    <path
+        android:name="graphDot"
+        android:fillAlpha="0"
+        android:fillColor="#2D5F1B"
+        android:pathData="M275,6 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+
+</vector>

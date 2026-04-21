@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Tree canopy -->
+    <path
+        android:fillColor="#2D5F1B"
+        android:pathData="M12,3
+            C8.2,3 5,6.2 5,10
+            C5,13.8 8.2,16 12,16
+            C15.8,16 19,13.8 19,10
+            C19,6.2 15.8,3 12,3 Z" />
+
+    <!-- Tree trunk -->
+    <path
+        android:fillColor="#2D5F1B"
+        android:pathData="M11,15.5 L11,21 L13,21 L13,15.5 Z" />
+
+</vector>

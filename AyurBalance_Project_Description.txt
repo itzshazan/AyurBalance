@@ -1,0 +1,127 @@
+AyurBalance
+Personalised Ayurvedic Nutrition & Wellness, Powered by AI
+
+1. Project Overview
+AyurBalance is an intelligent mobile health application that merges the ancient principles of Ayurveda with modern artificial intelligence to deliver deeply personalised nutrition and wellness guidance. Unlike generic diet applications that rely solely on calorie counting or BMI-based metrics, AyurBalance builds its recommendations on a foundational understanding of each user’s unique physiological constitution — their Prakriti — classified across the three primary doshas: Vata, Pitta, and Kapha.
+The application combines AI-powered food recognition, a clinically structured Prakriti assessment, dynamic Vikriti (imbalance) tracking, and seasonal dietary protocols to deliver a holistic, data-driven wellness experience. By layering Ayurvedic intelligence over a scalable modern backend, AyurBalance eliminates the limitations of both manual tracking and one-size-fits-all diet plans, empowering users to make informed dietary and lifestyle decisions grounded in their individual physiology.
+
+2. Prakriti Assessment — Core Constitution Engine
+The Prakriti assessment is the foundational engine of AyurBalance. It is a structured, multi-dimensional questionnaire comprising 42 questions across seven key physiological and psychological dimensions, each evaluated on a weighted three-point scale corresponding to Vata, Pitta, and Kapha tendencies.
+
+Assessment Dimensions
+•	Physical constitution — body frame, weight distribution, skin and hair type
+•	Digestive tendencies — appetite patterns, bowel regularity, food preferences
+•	Sleep and energy — sleep quality, stamina, and recovery patterns
+•	Mental temperament — decision-making style, memory, emotional responses
+•	Sensory sensitivities — tolerance to heat, cold, sound, and light
+•	Metabolic indicators — thirst levels, perspiration, and thermogenic tendencies
+•	Lifestyle and activity — movement preferences, work habits, and stress responses
+
+Dual and Tri-Dosha Handling
+AyurBalance fully supports mixed constitutional types. Scores are computed as percentages across all three doshas, and users are classified into one of seven constitution types: the three single-dosha types (Vata, Pitta, Kapha), three dual-dosha types (Vata-Pitta, Pitta-Kapha, Vata-Kapha), and the rare Tridoshic type. Dietary and lifestyle recommendations are proportionally weighted based on the user’s dominant and secondary dosha scores.
+
+Re-assessment and Longitudinal Tracking
+Prakriti, being a lifelong constitution, is assessed once at onboarding and remains stable. However, AyurBalance also tracks Vikriti — the user’s current state of imbalance — through brief daily check-ins covering digestion quality, energy levels, mood, sleep, and stress. Recommendations dynamically adjust based on active Vikriti data, allowing the app to respond to temporary imbalances caused by seasonal changes, illness, or lifestyle disruptions.
+
+3. AI Food Recognition — Data Strategy & Fallback
+Food logging is powered by an on-device TensorFlow Lite model optimised for South Asian and Indian cuisine. Given the scarcity of publicly available Indian food datasets, AyurBalance adopts a three-tier data strategy.
+
+Model Training Approach
+•	Transfer learning from MobileNetV3-Large, pre-trained on ImageNet, fine-tuned on a curated Indian food dataset of over 80,000 labelled images spanning 200+ dish categories. Base model:
+•	Combination of the Indian Food Images Dataset (Kaggle), ETHZ Food-101 supplemented with Indian categories, and a proprietary dataset of mixed dishes (curries, rice preparations, breads, snacks) collected and labelled in-house. Dataset sources:
+•	TFLite INT8 quantised model for fast, offline inference with a model size under 12 MB, ensuring compatibility with mid-range Android devices. On-device inference:
+
+Mixed-Dish & Ambiguous Food Handling
+For complex preparations such as biryani, dal tadka, or thali plates, the model outputs a confidence score alongside the top-3 predictions. The following fallback logic applies:
+•	Confidence ≥ 80%: Auto-log with a single-tap confirmation prompt.
+•	Confidence 50–79%: Display top-3 predictions for user selection before logging.
+•	Confidence < 50%: Automatically open manual search with a nutritional database lookup, pre-populated with the model’s best guess.
+
+Nutritional Database
+Calorie and nutrient data is sourced from a combination of the ICMR–NIN Nutritive Value of Indian Foods database (India-specific values for local ingredients), the USDA FoodData Central (for packaged and international foods), and a custom Ayurvedic food properties database mapping over 500 ingredients to their Rasa (taste), Guna (quality), Virya (potency), and Vipaka (post-digestive effect) for dosha compatibility scoring.
+
+4. Personalised Diet Planning
+Diet plans in AyurBalance are generated dynamically at three levels: constitutional baseline (Prakriti), current imbalance state (Vikriti), and seasonal protocol (Ritucharya). The three levels are layered hierarchically — the seasonal protocol constrains the food pool, Prakriti preferences rank within that pool, and active Vikriti flags temporarily restrict or promote specific foods.
+
+Ritucharya — Seasonal Dietary Protocols
+Ayurveda prescribes distinct dietary guidelines for each of the six Ritu (seasons). AyurBalance automatically detects the user’s geographic location and current calendar date to apply the appropriate seasonal protocol, shifting meal plan recommendations accordingly. For example, during Hemanta (early winter), Kapha-aggravating heavy foods are gradually introduced for Vata users while Pitta types are guided toward warming, nourishing preparations.
+
+Meal Plan Generation
+•	Three meals and two snacks per day, customisable for intermittent fasting or specific eating windows.
+•	Recipes tagged with preparation time, cooking method, and primary ingredients.
+•	Substitute suggestions for ingredients based on availability, allergies, and regional preferences.
+•	Weekly plans that adapt progressively based on logged meals and Vikriti check-in data.
+
+5. Core Application Features
+
+Food Logging	Image capture with AI recognition, manual search via ICMR/USDA database, barcode scanning for packaged goods, and voice entry for quick logging.
+
+Nutrient Tracking	Macronutrient and micronutrient breakdown per meal and daily summary. Dosha compatibility score per logged food item.
+
+Vikriti Check-ins	Daily 5-question check-in covering digestion, energy, mood, sleep quality, and stress. Results feed the recommendation engine in real time.
+
+Hydration Reminders	Dosha-adjusted hydration targets (e.g., Pitta types require higher intake) with smart reminders based on meal timing, activity, and ambient season.
+
+Health Analytics	Weekly and monthly trend visualisations for nutrient balance, dosha alignment scores, body weight, energy levels, and digestive health ratings.
+
+Lifestyle Guidance	Real-time push notifications for meal timing, sleep schedule, and daily routine (Dinacharya) aligned to the user’s dosha and current Vikriti.
+
+6. Technology Stack
+
+Frontend — Android
+•	Native Android application developed in Kotlin (primary) and Java.
+•	Minimum SDK: Android 8.0 (API 26); Target SDK: Android 14 (API 34).
+•	Architecture: MVVM with LiveData and ViewBinding.
+•	UI: Material Design 3 components with Ayurvedic-inspired visual language.
+•	Camera integration: CameraX API for real-time food image capture.
+•	On-device ML: TensorFlow Lite with GPU delegate acceleration for food recognition.
+
+Backend — Supabase
+•	Authentication: Supabase Auth with email OTP verification and session token management.
+•	Database: PostgreSQL via Supabase for structured storage of user profiles, health data, food logs, Prakriti/Vikriti scores, meal plans, and analytics.
+•	Storage: Supabase Storage for uploaded food images, with automatic lifecycle policies to delete unanalysed images after 24 hours, reducing storage costs.
+•	Real-time: Supabase Realtime subscriptions for live dashboard updates and streak tracking.
+•	API: Auto-generated RESTful and GraphQL endpoints via PostgREST, secured with Row-Level Security (RLS) policies.
+
+AI & Data
+•	TFLite MobileNetV3-Large (INT8 quantised) for on-device food classification.
+•	ICMR–NIN + USDA FoodData Central for nutritional values.
+•	Proprietary Ayurvedic food properties database for dosha compatibility scoring.
+
+7. Data Privacy, Security & Compliance
+AyurBalance handles sensitive personal health information and is designed with privacy and compliance as foundational requirements, not afterthoughts.
+
+Data Protection
+•	All data at rest is encrypted using AES-256 encryption within Supabase’s managed PostgreSQL infrastructure.
+•	All data in transit is encrypted via TLS 1.3.
+•	Row-Level Security (RLS) policies in PostgreSQL ensure users can only access their own data — even in the event of application-layer bugs.
+•	Food images uploaded for analysis are automatically deleted within 24 hours; only the derived nutritional log entry is retained.
+
+Regulatory Compliance
+•	DPDP Act 2023 (India): The app complies with India’s Digital Personal Data Protection Act, including explicit consent collection at onboarding, a clear privacy policy, and user rights to access, correct, and delete their data.
+•	GDPR (for international users): Data minimisation principles are applied; no health data is shared with third parties without explicit user consent.
+•	Medical disclaimer: AyurBalance provides wellness guidance based on traditional Ayurvedic principles and general nutritional information. It is not a medical device, does not diagnose or treat conditions, and users are advised to consult a qualified healthcare professional for medical concerns. This disclaimer is displayed at onboarding and within the app settings.
+
+Offline & Data Resilience
+AyurBalance implements a local-first architecture for core features. Meal logs, check-in data, and the current week’s meal plan are cached locally using Room (Android’s SQLite abstraction layer). On network restoration, a background sync service reconciles local changes with the Supabase backend using a last-write-wins conflict resolution strategy with timestamps. Food image analysis requires connectivity, but all other logging and check-in features function fully offline.
+
+8. Target Audience & Value Proposition
+
+Primary Audience
+•	Health-conscious individuals seeking personalised, non-generic dietary guidance.
+•	Ayurveda followers and practitioners looking for a digital companion aligned with traditional principles.
+•	Fitness enthusiasts who want to align nutrition with physiological type rather than generic macros.
+•	Users managing chronic lifestyle conditions (e.g., digestive disorders, fatigue, weight imbalance) through dietary adjustment.
+
+Differentiation from Existing Apps
+Most nutrition apps (MyFitnessPal, HealthifyMe, Noom) operate on universal calorie and macro frameworks. AyurBalance differentiates on three axes: constitutional personalisation (Prakriti-based recommendations that no other mainstream app offers), dynamic imbalance correction (Vikriti tracking that adjusts plans in real time), and cultural relevance (a food database and recognition model built specifically for Indian cuisine and Ayurvedic ingredient properties).
+
+9. Future Roadmap
+•	iOS application (Flutter migration or Swift native) to expand platform reach.
+•	Practitioner portal — a web dashboard for Ayurvedic practitioners to review patient food logs and annotate recommendations, enabling a B2B revenue stream.
+•	Wearable integration — Google Fit and Fitbit API connections to correlate sleep, HRV, and activity data with dosha balance trends.
+•	Pulse diagnosis (Nadi Pariksha) assistant — a guided self-assessment module to supplement Vikriti tracking with traditional diagnostic indicators.
+•	Community and recipe sharing — a curated recipe library with user submissions, filtered by dosha type and season.
+
+AyurBalance
+Rooted in tradition. Built for today.

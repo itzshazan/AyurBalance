@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Splash Screen Dimensions -->
+    <dimen name="splash_badge_size">120dp</dimen>
+    <dimen name="splash_badge_radius">60dp</dimen>
+    <dimen name="splash_badge_padding">28dp</dimen>
+    <dimen name="splash_badge_elevation">4dp</dimen>
+    <dimen name="splash_app_name_size">36sp</dimen>
+    <dimen name="splash_tagline_size">12sp</dimen>
+    <dimen name="splash_status_size">11sp</dimen>
+    <dimen name="splash_subtext_size">10sp</dimen>
+    <dimen name="splash_progress_width">56dp</dimen>
+    <dimen name="splash_progress_height">3dp</dimen>
+    <dimen name="splash_plant_size">160dp</dimen>
+    <dimen name="splash_plant_margin_start">16dp</dimen>
+    <dimen name="splash_plant_margin_top">36dp</dimen>
+    <dimen name="splash_botanical_width">200dp</dimen>
+    <dimen name="splash_botanical_height">260dp</dimen>
+    <dimen name="splash_tree_icon_size">18dp</dimen>
+
+    <!-- Standard Spacing Scale -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Onboarding Dimensions -->
+    <dimen name="onboarding_card_width">95dp</dimen>
+    <dimen name="onboarding_card_height">105dp</dimen>
+    <dimen name="onboarding_card_radius">16dp</dimen>
+    <dimen name="onboarding_card_elevation">8dp</dimen>
+    <dimen name="onboarding_dot_active_width">24dp</dimen>
+    <dimen name="onboarding_dot_height">8dp</dimen>
+    <dimen name="onboarding_dot_spacing">6dp</dimen>
+    <dimen name="onboarding_heading_size">30sp</dimen>
+    <dimen name="onboarding_desc_size">17sp</dimen>
+    <dimen name="onboarding_btn_height">54dp</dimen>
+    <dimen name="onboarding_btn_radius">28dp</dimen>
+    <dimen name="onboarding_btn_text_size">16sp</dimen>
+    <dimen name="onboarding_brand_size">28sp</dimen>
+    <dimen name="onboarding_margin">24dp</dimen>
+
+</resources>

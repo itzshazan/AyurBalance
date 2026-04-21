@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- AyurBalance — Earthy Ayurveda Color Palette -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <!-- Primary Greens -->
+    <color name="primary_green">#2D5F1B</color>
+    <color name="primary_green_dark">#1B4A0F</color>
+    <color name="primary_green_light">#4A7A35</color>
+
+    <!-- Splash Screen Surfaces -->
+    <color name="splash_background">#FAF5EF</color>
+    <color name="splash_bottom_bg">#F5EDE3</color>
+
+    <!-- Badge -->
+    <color name="badge_circle_bg">#E4D9CB</color>
+
+    <!-- Splash Text Colors -->
+    <color name="text_dark_green">#2D5F1B</color>
+    <color name="text_tagline_brown">#7D7164</color>
+    <color name="text_status_brown">#8B6B2F</color>
+    <color name="text_subtext_grey">#9E9589</color>
+
+    <!-- Progress Bar -->
+    <color name="progress_track">#D4CCC2</color>
+    <color name="progress_fill">#2D5F1B</color>
+
+    <!-- Onboarding Colors -->
+    <color name="hero_brand_text">#8B9E5E</color>
+    <color name="text_heading_dark">#2A2520</color>
+
+    <!-- General App Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="surface_cream">#FDF8F3</color>
+    <color name="divider_light">#E8E0D6</color>
+    <color name="text_body">#4A4540</color>
+    <color name="text_caption">#8A8279</color>
+
+    <!-- Onboarding 2 Colors -->
+    <color name="phone_frame_bg">#DDD2C5</color>
+    <color name="grid_line">#33FFFFFF</color>
+    <color name="analysis_card_bg">#FBF5ED</color>
+
+    <!-- Onboarding 3 Colors -->
+    <color name="energy_orange">#E8A75A</color>
+    <color name="week_badge_bg">#E8F5E0</color>
+    <color name="progress_track_light">#F0EBE5</color>
+
+    <!-- Privacy Screen Colors -->
+    <color name="badge_green_light">#DDE8D0</color>
+    <color name="badge_orange_light">#F5E0C8</color>
+
+    <!-- Auth / Sign Up Colors -->
+    <color name="input_field_bg">#EDE5DA</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="input_icon_tint">#9E9589</color>
+
+    <!-- Profile Step Colors -->
+    <color name="step_indicator_red">#8B3A2A</color>
+    <color name="info_card_bg">#F0E8DC</color>
+
+</resources>

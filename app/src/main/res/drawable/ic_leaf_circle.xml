@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="44dp"
+    android:height="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+
+    <!-- Light green circle -->
+    <path
+        android:fillColor="#C5DBA8"
+        android:pathData="M22,2C11,2 2,11 2,22s9,20 20,20 20,-9 20,-20S33,2 22,2z" />
+
+    <!-- Dark green leaf -->
+    <path
+        android:fillColor="#2D5F1B"
+        android:pathData="M22,11 C16,16 13,22 16,28 C18,25 20,22 22,18 C24,22 26,25 28,28 C31,22 28,16 22,11z" />
+
+</vector>

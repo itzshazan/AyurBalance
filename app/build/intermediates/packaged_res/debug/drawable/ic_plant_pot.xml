@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+
+    <!-- Pot body (wide, solid trapezoid) -->
+    <path
+        android:fillColor="#C49A4B"
+        android:pathData="M13,24 L16,35 L24,35 L27,24 Z" />
+
+    <!-- Pot rim (bold strip) -->
+    <path
+        android:fillColor="#B08838"
+        android:pathData="M11,22 L29,22 L29,25 L11,25 Z" />
+
+    <!-- Center stem (thick) -->
+    <path
+        android:fillColor="#A07C3A"
+        android:pathData="M19,22 L19,11 L21,11 L21,22 Z" />
+
+    <!-- Left leaf (bold, wide sweep) -->
+    <path
+        android:fillColor="#B08838"
+        android:pathData="M20,17
+            C13,12 8,10 8,10
+            C10,17 16,19 20,17 Z" />
+
+    <!-- Right leaf (bold, wide sweep) -->
+    <path
+        android:fillColor="#B08838"
+        android:pathData="M20,13
+            C27,7 32,5 32,5
+            C30,13 24,15 20,13 Z" />
+
+    <!-- Top center leaf bud -->
+    <path
+        android:fillColor="#C49A4B"
+        android:pathData="M20,11
+            C17,6 20,2 20,2
+            C20,2 23,6 20,11 Z" />
+
+</vector>
