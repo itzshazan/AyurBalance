@@ -3,6 +3,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- COARSE only — GPS precision not needed for climate zone detection -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".AyurBalanceApp"
@@ -102,9 +104,45 @@
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.AyurBalance.Auth" />
 
+        <!-- Location Permission (between Profile Setup and Prakriti) -->
+        <activity
+            android:name=".ui.location.LocationPermissionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Assessment -->
+        <activity
+            android:name=".ui.prakriti.PrakritiQuestionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Result -->
+        <activity
+            android:name=".ui.prakriti.PrakritiResultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
         <!-- Main Dashboard -->
         <activity
             android:name=".ui.dashboard.DashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Log Food (Camera / ML identification) -->
+        <activity
+            android:name=".ui.logfood.LogFoodActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Admin Panel -->
+        <activity
+            android:name=".admin.AdminLoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <activity
+            android:name=".admin.AdminDashboardActivity"
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
 

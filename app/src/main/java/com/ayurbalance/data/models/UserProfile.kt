@@ -5,14 +5,15 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class UserProfile(
-    val age: Int,
-    val gender: String,
-    val height: Double,
-    val weight: Double,
-    @SerialName("activity_level") val activityLevel: String,
-    @SerialName("sleep_hours") val sleepHours: Double,
-    @SerialName("sleep_quality") val sleepQuality: String,
-    @SerialName("diet_type") val dietType: String,
-    @SerialName("health_conditions") val healthConditions: List<String>,
-    val goal: String
+    @SerialName("user_id") val userId: String = "",
+    val age: Int = 0,
+    val gender: String = "",
+    val height: Double = 0.0,
+    val weight: Double = 0.0,
+    @SerialName("activity_level") val activityLevel: String = "",
+    @SerialName("sleep_hours") val sleepHours: Double = 0.0,
+    @SerialName("sleep_quality") val sleepQuality: String = "",
+    @SerialName("diet_type") val dietType: String = "",
+    @SerialName("health_conditions") val healthConditions: List<String> = emptyList(),
+    val goal: String = ""
 )

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Warning banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="#FAEEDA"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:background="@color/pitta_terracotta" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingMultiplier="1.4"
+                android:text="3 data deletion requests are pending beyond the 48-hour SLA. Action required to avoid DPDP Act violation."
+                android:textColor="#854F0B"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Metric cards -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pending deletions" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvPendingCount"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="3" android:textColor="@color/error_red" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="SLA breach risk" android:textColor="@color/error_red" android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Data access requests" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="7" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Within 30-day SLA" android:textColor="@color/text_caption" android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Consent rate" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="99.2%" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="DPDP compliant" android:textColor="@color/admin_accent" android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Images purged today" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="1,204" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="24 h rule enforced" android:textColor="@color/admin_accent" android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Deletion queue card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Data deletion queue" android:textColor="@color/text_heading_dark"
+                    android:textSize="13sp" android:textStyle="bold" />
+                <TextView android:id="@+id/btnProcessAll"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn_primary"
+                    android:clickable="true" android:focusable="true"
+                    android:paddingHorizontal="12dp" android:paddingVertical="6dp"
+                    android:text="Process all" android:textColor="@color/white" android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Deletion rows are added programmatically -->
+            <LinearLayout
+                android:id="@+id/containerDeletions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+        <!-- Compliance checks card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Compliance checks" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+            <include layout="@layout/include_compliance_row" android:id="@+id/rowRls" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
+                <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="@color/divider_light" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="TLS 1.3 enforcement" android:textColor="@color/text_body" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="#E1F5EE" android:paddingHorizontal="10dp" android:paddingVertical="3dp"
+                    android:text="Active" android:textColor="#0F6E56" android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="AES-256 at rest" android:textColor="@color/text_body" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="#E1F5EE" android:paddingHorizontal="10dp" android:paddingVertical="3dp"
+                    android:text="Active" android:textColor="#0F6E56" android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Medical disclaimer shown" android:textColor="@color/text_body" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="100% users" android:textColor="@color/text_heading_dark" android:textSize="13sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Last full audit" android:textColor="@color/text_body" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="18 Apr 2026" android:textColor="@color/text_heading_dark" android:textSize="13sp" android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Consent management card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Consent management" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="4dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Version history · per-user consent timestamps · opt-out tracking"
+                android:textColor="@color/text_caption" android:textSize="12sp" android:layout_marginBottom="10dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Current policy version" android:textColor="@color/text_body" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="v2.1 — 1 Apr 2026" android:textColor="@color/text_heading_dark" android:textSize="13sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Users on latest version" android:textColor="@color/text_body" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="23,840 / 24,871" android:textColor="@color/text_heading_dark" android:textSize="13sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Needing re-consent" android:textColor="@color/text_body" android:textSize="13sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="1,031 — send nudge" android:textColor="@color/pitta_terracotta" android:textSize="13sp" android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -235,6 +235,28 @@
     <string name="label_next_prakriti">NEXT: PERSONAL PRAKRITI ASSESSMENT</string>
     <string name="link_need_help">Need help defining your goal?</string>
 
+    <!-- Location Permission Screen -->
+    <string name="location_heading">Where are you\nlocated?</string>
+    <string name="location_body">AyurBalance uses your region to apply the correct seasonal dietary protocol (Ritucharya). Your exact coordinates are never stored — only your climate zone.</string>
+    <string name="location_privacy_note">Coordinates are not stored. Only your broad climate zone is saved locally on your device.</string>
+    <string name="btn_allow_location">Allow Location</string>
+    <string name="btn_skip_location">Set region manually instead</string>
+    <string name="manual_region_heading">Select your region</string>
+    <string name="manual_region_body">This helps us apply the right seasonal food guidelines (Ritucharya) for your area.</string>
+    <string name="label_your_region">YOUR REGION</string>
+    <string name="btn_confirm_region">Confirm Region  →</string>
+    <string name="location_footer_note">You can change this anytime from your profile settings.</string>
+
+    <!-- Prakriti Assessment -->
+    <string name="prakriti_assessment_title">Prakriti Assessment</string>
+    <string name="prakriti_vata">VATA</string>
+    <string name="prakriti_pitta">PITTA</string>
+    <string name="prakriti_kapha">KAPHA</string>
+    <string name="label_live_profile_analysis">LIVE PROFILE ANALYSIS</string>
+    <string name="prakriti_note_default">Insights update in real-time as you refine your profile.</string>
+    <string name="btn_next_question">Next Question  →</string>
+    <string name="btn_complete_assessment">Complete Assessment  →</string>
+
     <!-- Placeholder Screens (kept for backward compat) -->
     <string name="onboarding_title">Welcome to AyurBalance</string>
     <string name="onboarding_subtitle">Discover your Prakriti and begin your personalised wellness journey.</string>

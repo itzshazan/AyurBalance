@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.ayurbalance.AyurBalanceApp
+import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.launch
 
@@ -224,7 +226,7 @@ class ProfileViewModel : ViewModel() {
     val submissionState: LiveData<SubmissionState> = _submissionState
 
     fun submitProfile() {
-        // Collect all data into the model
+        // Collect all data into the model (userId injected in coroutine)
         val profile = com.ayurbalance.data.models.UserProfile(
             age = _age.value ?: 0,
             gender = _gender.value ?: "unknown",
@@ -242,10 +244,13 @@ class ProfileViewModel : ViewModel() {
 
         viewModelScope.launch {
             try {
-                // Post to Supabase
-                com.ayurbalance.AyurBalanceApp.supabaseClient
+                val userId = AyurBalanceApp.supabaseClient.auth.currentUserOrNull()?.id ?: ""
+                val profileWithId = profile.copy(userId = userId)
+
+                // Upsert so re-running setup doesn't create duplicate rows
+                AyurBalanceApp.supabaseClient
                     .from("user_profiles")
-                    .insert(profile)
+                    .upsert(value = profileWithId, onConflict = "user_id")
 
                 _submissionState.postValue(SubmissionState.Success)
             } catch (e: Exception) {

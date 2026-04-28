@@ -9,286 +9,365 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:4:5-67
-11-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:5:5-79
-12-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:5:22-76
-13
-14    <permission
-14-->[androidx.core:core:1.12.0] C:\Users\LOQ\.gradle\caches\transforms-3\feccc0da1b107c09fae1cd2a12d6c2b0\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
-15        android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-15-->[androidx.core:core:1.12.0] C:\Users\LOQ\.gradle\caches\transforms-3\feccc0da1b107c09fae1cd2a12d6c2b0\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-16        android:protectionLevel="signature" />
-16-->[androidx.core:core:1.12.0] C:\Users\LOQ\.gradle\caches\transforms-3\feccc0da1b107c09fae1cd2a12d6c2b0\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
-17
-18    <uses-permission android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-18-->[androidx.core:core:1.12.0] C:\Users\LOQ\.gradle\caches\transforms-3\feccc0da1b107c09fae1cd2a12d6c2b0\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
-18-->[androidx.core:core:1.12.0] C:\Users\LOQ\.gradle\caches\transforms-3\feccc0da1b107c09fae1cd2a12d6c2b0\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+12-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:5:5-79
+12-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:5:22-76
+13    <!-- COARSE only — GPS precision not needed for climate zone detection -->
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:7:5-81
+14-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:7:22-78
+15
+16    <permission
+16-->[androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+17        android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 19
-20    <application
-20-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:7:5-111:19
-21        android:name="com.ayurbalance.AyurBalanceApp"
-21-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:8:9-39
-22        android:allowBackup="true"
-22-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:9:9-35
-23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.12.0] C:\Users\LOQ\.gradle\caches\transforms-3\feccc0da1b107c09fae1cd2a12d6c2b0\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
-24        android:debuggable="true"
-25        android:extractNativeLibs="false"
-26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:10:9-43
-27        android:label="@string/app_name"
-27-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:11:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:12:9-54
-29        android:supportsRtl="true"
-29-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:13:9-35
-30        android:testOnly="true"
-31        android:theme="@style/Theme.AyurBalance" >
-31-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:14:9-49
-32
-33        <!-- Splash Screen — App Entry Point -->
-34        <activity
-34-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:17:9-25:20
-35            android:name="com.ayurbalance.ui.splash.SplashActivity"
-35-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:18:13-53
-36            android:exported="true"
-36-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:19:13-36
-37            android:theme="@style/Theme.AyurBalance.Splash" >
-37-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:20:13-60
-38            <intent-filter>
-38-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:21:13-24:29
-39                <action android:name="android.intent.action.MAIN" />
-39-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:22:17-69
-39-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:22:25-66
-40
-41                <category android:name="android.intent.category.LAUNCHER" />
-41-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:23:17-77
-41-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:23:27-74
-42            </intent-filter>
-43        </activity>
-44
-45        <!-- Onboarding Flow -->
-46        <activity
-46-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:28:9-31:67
-47            android:name="com.ayurbalance.ui.onboarding.OnboardingActivity"
-47-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:29:13-61
-48            android:exported="false"
-48-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:30:13-37
-49            android:theme="@style/Theme.AyurBalance.Onboarding" />
-49-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:31:13-64
-50        <activity
-50-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:33:9-36:67
-51            android:name="com.ayurbalance.ui.onboarding.Onboarding2Activity"
-51-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:34:13-62
-52            android:exported="false"
-52-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:35:13-37
-53            android:theme="@style/Theme.AyurBalance.Onboarding" />
-53-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:36:13-64
-54        <activity
-54-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:38:9-41:67
-55            android:name="com.ayurbalance.ui.onboarding.Onboarding3Activity"
-55-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:39:13-62
-56            android:exported="false"
-56-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:40:13-37
-57            android:theme="@style/Theme.AyurBalance.Onboarding" />
-57-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:41:13-64
-58        <activity
-58-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:43:9-46:67
-59            android:name="com.ayurbalance.ui.onboarding.OnboardingPrivacyActivity"
-59-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:44:13-68
-60            android:exported="false"
-60-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:45:13-37
-61            android:theme="@style/Theme.AyurBalance.Onboarding" />
-61-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:46:13-64
-62
-63        <!-- Auth Flow -->
-64        <activity
-64-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:49:9-53:61
-65            android:name="com.ayurbalance.ui.auth.SignupActivity"
-65-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:50:13-51
-66            android:exported="false"
-66-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:51:13-37
-67            android:theme="@style/Theme.AyurBalance.Auth"
-67-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:53:13-58
-68            android:windowSoftInputMode="adjustResize" />
-68-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:52:13-55
-69        <activity
-69-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:55:9-72:20
-70            android:name="com.ayurbalance.ui.auth.LoginActivity"
-70-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:56:13-50
-71            android:exported="true"
-71-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:57:13-36
-72            android:launchMode="singleTask"
-72-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:58:13-44
-73            android:theme="@style/Theme.AyurBalance.Auth"
-73-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:60:13-58
-74            android:windowSoftInputMode="adjustResize" >
-74-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:59:13-55
-75
-76            <!-- OAuth deep link callback -->
-77            <intent-filter>
-77-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:63:13-70:29
-78                <action android:name="android.intent.action.VIEW" />
-78-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:64:17-69
-78-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:64:25-66
-79
-80                <category android:name="android.intent.category.DEFAULT" />
-80-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:65:17-76
-80-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:65:27-73
-81                <category android:name="android.intent.category.BROWSABLE" />
-81-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:66:17-78
-81-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:66:27-75
-82
-83                <data
-83-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:67:17-69:53
-84                    android:host="login-callback"
-84-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:69:21-50
-85                    android:scheme="ayurbalance" />
-85-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:68:21-49
-86            </intent-filter>
-87        </activity>
-88        <activity
-88-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:74:9-78:61
-89            android:name="com.ayurbalance.ui.auth.OtpVerificationActivity"
-89-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:75:13-60
-90            android:exported="false"
-90-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:76:13-37
-91            android:theme="@style/Theme.AyurBalance.Auth"
-91-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:78:13-58
-92            android:windowSoftInputMode="adjustResize" />
-92-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:77:13-55
-93
-94        <!-- Health Profile Steps -->
-95        <activity
-95-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:81:9-85:61
-96            android:name="com.ayurbalance.ui.profile.ProfileStep1Activity"
-96-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:82:13-60
-97            android:exported="false"
-97-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:83:13-37
-98            android:theme="@style/Theme.AyurBalance.Auth"
-98-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:85:13-58
-99            android:windowSoftInputMode="adjustResize" />
-99-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:84:13-55
-100        <activity
-100-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:87:9-91:61
-101            android:name="com.ayurbalance.ui.profile.ProfileStep2Activity"
-101-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:88:13-60
-102            android:exported="false"
-102-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:89:13-37
-103            android:theme="@style/Theme.AyurBalance.Auth"
-103-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:91:13-58
-104            android:windowSoftInputMode="adjustResize" />
-104-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:90:13-55
-105        <activity
-105-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:93:9-97:61
-106            android:name="com.ayurbalance.ui.profile.ProfileStep3Activity"
-106-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:94:13-60
-107            android:exported="false"
-107-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:95:13-37
-108            android:theme="@style/Theme.AyurBalance.Auth"
-108-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:97:13-58
-109            android:windowSoftInputMode="adjustResize" />
-109-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:96:13-55
-110        <activity
-110-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:99:9-103:61
-111            android:name="com.ayurbalance.ui.profile.ProfileStep4Activity"
-111-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:100:13-60
-112            android:exported="false"
-112-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:101:13-37
-113            android:theme="@style/Theme.AyurBalance.Auth"
-113-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:103:13-58
-114            android:windowSoftInputMode="adjustResize" />
-114-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:102:13-55
-115
-116        <!-- Main Dashboard -->
-117        <activity
-117-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:106:9-109:56
-118            android:name="com.ayurbalance.ui.dashboard.DashboardActivity"
-118-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:107:13-59
-119            android:exported="false"
-119-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:108:13-37
-120            android:theme="@style/Theme.AyurBalance" />
-120-->C:\Users\LOQ\Downloads\AyurBalance\app\src\main\AndroidManifest.xml:109:13-53
-121
-122        <provider
-122-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LOQ\.gradle\caches\transforms-3\1e9cabea932720454d564db0972a480b\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-123            android:name="androidx.startup.InitializationProvider"
-123-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LOQ\.gradle\caches\transforms-3\1e9cabea932720454d564db0972a480b\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-124            android:authorities="com.ayurbalance.androidx-startup"
-124-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LOQ\.gradle\caches\transforms-3\1e9cabea932720454d564db0972a480b\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-125            android:exported="false" >
-125-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LOQ\.gradle\caches\transforms-3\1e9cabea932720454d564db0972a480b\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-126            <meta-data
-126-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LOQ\.gradle\caches\transforms-3\1e9cabea932720454d564db0972a480b\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-127                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-127-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LOQ\.gradle\caches\transforms-3\1e9cabea932720454d564db0972a480b\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-128                android:value="androidx.startup" />
-128-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LOQ\.gradle\caches\transforms-3\1e9cabea932720454d564db0972a480b\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-129            <meta-data
-129-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:2.1.4] C:\Users\LOQ\.gradle\caches\transforms-3\fbcb44c2e92c3ae6375cedd2bdaf5815\transformed\gotrue-kt-debug\AndroidManifest.xml:14:13-16:52
-130                android:name="io.github.jan.supabase.gotrue.SupabaseInitializer"
-130-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:2.1.4] C:\Users\LOQ\.gradle\caches\transforms-3\fbcb44c2e92c3ae6375cedd2bdaf5815\transformed\gotrue-kt-debug\AndroidManifest.xml:15:17-81
-131                android:value="androidx.startup" />
-131-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:2.1.4] C:\Users\LOQ\.gradle\caches\transforms-3\fbcb44c2e92c3ae6375cedd2bdaf5815\transformed\gotrue-kt-debug\AndroidManifest.xml:16:17-49
-132            <meta-data
-132-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\LOQ\.gradle\caches\transforms-3\4a1fccb56bcba23ab6d59ccf0f4d9289\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-133                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-133-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\LOQ\.gradle\caches\transforms-3\4a1fccb56bcba23ab6d59ccf0f4d9289\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-134                android:value="androidx.startup" />
-134-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\LOQ\.gradle\caches\transforms-3\4a1fccb56bcba23ab6d59ccf0f4d9289\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
-135            <meta-data
-135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-136                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-137                android:value="androidx.startup" />
-137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-138            <meta-data
-138-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\LOQ\.gradle\caches\transforms-3\3a9bc75ebfb0eb19fba7a5e7ea9d0a9e\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:29:13-31:52
-139                android:name="com.russhwolf.settings.SettingsInitializer"
-139-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\LOQ\.gradle\caches\transforms-3\3a9bc75ebfb0eb19fba7a5e7ea9d0a9e\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:30:17-74
-140                android:value="androidx.startup" />
-140-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\LOQ\.gradle\caches\transforms-3\3a9bc75ebfb0eb19fba7a5e7ea9d0a9e\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:31:17-49
-141        </provider>
-142
-143        <receiver
-143-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-144            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-144-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-145            android:directBootAware="false"
-145-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-146            android:enabled="true"
-146-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-147            android:exported="true"
-147-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-148            android:permission="android.permission.DUMP" >
-148-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-149            <intent-filter>
-149-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-150                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-150-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-150-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-151            </intent-filter>
-152            <intent-filter>
-152-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-153                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-153-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-153-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-154            </intent-filter>
-155            <intent-filter>
-155-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-156                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-156-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-156-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-157            </intent-filter>
-158            <intent-filter>
-158-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-159                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-159-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-159-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LOQ\.gradle\caches\transforms-3\8a338870ff89f6359492d762b86e1963\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-160            </intent-filter>
-161        </receiver>
-162    </application>
-163
-164</manifest>
+20    <uses-permission android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:9:5-149:19
+23        android:name="com.ayurbalance.AyurBalanceApp"
+23-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:10:9-39
+24        android:allowBackup="true"
+24-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:11:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+28        android:icon="@mipmap/ic_launcher"
+28-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:12:9-43
+29        android:label="@string/app_name"
+29-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:13:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:14:9-54
+31        android:supportsRtl="true"
+31-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:15:9-35
+32        android:testOnly="true"
+33        android:theme="@style/Theme.AyurBalance" >
+33-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:16:9-49
+34
+35        <!-- Splash Screen — App Entry Point -->
+36        <activity
+36-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:19:9-27:20
+37            android:name="com.ayurbalance.ui.splash.SplashActivity"
+37-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:20:13-53
+38            android:exported="true"
+38-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:21:13-36
+39            android:theme="@style/Theme.AyurBalance.Splash" >
+39-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:22:13-60
+40            <intent-filter>
+40-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:23:13-26:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:24:17-69
+41-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:24:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:25:17-77
+43-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:25:27-74
+44            </intent-filter>
+45        </activity>
+46
+47        <!-- Onboarding Flow -->
+48        <activity
+48-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:30:9-33:67
+49            android:name="com.ayurbalance.ui.onboarding.OnboardingActivity"
+49-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:31:13-61
+50            android:exported="false"
+50-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:32:13-37
+51            android:theme="@style/Theme.AyurBalance.Onboarding" />
+51-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:33:13-64
+52        <activity
+52-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:35:9-38:67
+53            android:name="com.ayurbalance.ui.onboarding.Onboarding2Activity"
+53-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:36:13-62
+54            android:exported="false"
+54-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:37:13-37
+55            android:theme="@style/Theme.AyurBalance.Onboarding" />
+55-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:38:13-64
+56        <activity
+56-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:40:9-43:67
+57            android:name="com.ayurbalance.ui.onboarding.Onboarding3Activity"
+57-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:41:13-62
+58            android:exported="false"
+58-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:42:13-37
+59            android:theme="@style/Theme.AyurBalance.Onboarding" />
+59-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:43:13-64
+60        <activity
+60-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:45:9-48:67
+61            android:name="com.ayurbalance.ui.onboarding.OnboardingPrivacyActivity"
+61-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:46:13-68
+62            android:exported="false"
+62-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:47:13-37
+63            android:theme="@style/Theme.AyurBalance.Onboarding" />
+63-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:48:13-64
+64
+65        <!-- Auth Flow -->
+66        <activity
+66-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:51:9-55:61
+67            android:name="com.ayurbalance.ui.auth.SignupActivity"
+67-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:52:13-51
+68            android:exported="false"
+68-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:53:13-37
+69            android:theme="@style/Theme.AyurBalance.Auth"
+69-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:55:13-58
+70            android:windowSoftInputMode="adjustResize" />
+70-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:54:13-55
+71        <activity
+71-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:57:9-74:20
+72            android:name="com.ayurbalance.ui.auth.LoginActivity"
+72-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:58:13-50
+73            android:exported="true"
+73-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:59:13-36
+74            android:launchMode="singleTask"
+74-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:60:13-44
+75            android:theme="@style/Theme.AyurBalance.Auth"
+75-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:62:13-58
+76            android:windowSoftInputMode="adjustResize" >
+76-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:61:13-55
+77
+78            <!-- OAuth deep link callback -->
+79            <intent-filter>
+79-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:65:13-72:29
+80                <action android:name="android.intent.action.VIEW" />
+80-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:66:17-69
+80-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:66:25-66
+81
+82                <category android:name="android.intent.category.DEFAULT" />
+82-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:67:17-76
+82-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:67:27-73
+83                <category android:name="android.intent.category.BROWSABLE" />
+83-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:68:17-78
+83-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:68:27-75
+84
+85                <data
+85-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:69:17-71:53
+86                    android:host="login-callback"
+86-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:71:21-50
+87                    android:scheme="ayurbalance" />
+87-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:70:21-49
+88            </intent-filter>
+89        </activity>
+90        <activity
+90-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:76:9-80:61
+91            android:name="com.ayurbalance.ui.auth.OtpVerificationActivity"
+91-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:77:13-60
+92            android:exported="false"
+92-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:78:13-37
+93            android:theme="@style/Theme.AyurBalance.Auth"
+93-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:80:13-58
+94            android:windowSoftInputMode="adjustResize" />
+94-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:79:13-55
+95
+96        <!-- Health Profile Steps -->
+97        <activity
+97-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:83:9-87:61
+98            android:name="com.ayurbalance.ui.profile.ProfileStep1Activity"
+98-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:84:13-60
+99            android:exported="false"
+99-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:85:13-37
+100            android:theme="@style/Theme.AyurBalance.Auth"
+100-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:87:13-58
+101            android:windowSoftInputMode="adjustResize" />
+101-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:86:13-55
+102        <activity
+102-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:89:9-93:61
+103            android:name="com.ayurbalance.ui.profile.ProfileStep2Activity"
+103-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:90:13-60
+104            android:exported="false"
+104-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:91:13-37
+105            android:theme="@style/Theme.AyurBalance.Auth"
+105-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:93:13-58
+106            android:windowSoftInputMode="adjustResize" />
+106-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:92:13-55
+107        <activity
+107-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:95:9-99:61
+108            android:name="com.ayurbalance.ui.profile.ProfileStep3Activity"
+108-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:96:13-60
+109            android:exported="false"
+109-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:97:13-37
+110            android:theme="@style/Theme.AyurBalance.Auth"
+110-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:99:13-58
+111            android:windowSoftInputMode="adjustResize" />
+111-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:98:13-55
+112        <activity
+112-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:101:9-105:61
+113            android:name="com.ayurbalance.ui.profile.ProfileStep4Activity"
+113-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:102:13-60
+114            android:exported="false"
+114-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:103:13-37
+115            android:theme="@style/Theme.AyurBalance.Auth"
+115-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:105:13-58
+116            android:windowSoftInputMode="adjustResize" />
+116-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:104:13-55
+117
+118        <!-- Location Permission (between Profile Setup and Prakriti) -->
+119        <activity
+119-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:108:9-111:61
+120            android:name="com.ayurbalance.ui.location.LocationPermissionActivity"
+120-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:109:13-67
+121            android:exported="false"
+121-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:110:13-37
+122            android:theme="@style/Theme.AyurBalance.Auth" />
+122-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:111:13-58
+123
+124        <!-- Prakriti Assessment -->
+125        <activity
+125-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:114:9-117:61
+126            android:name="com.ayurbalance.ui.prakriti.PrakritiQuestionActivity"
+126-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:115:13-65
+127            android:exported="false"
+127-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:116:13-37
+128            android:theme="@style/Theme.AyurBalance.Auth" />
+128-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:117:13-58
+129
+130        <!-- Prakriti Result -->
+131        <activity
+131-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:120:9-123:61
+132            android:name="com.ayurbalance.ui.prakriti.PrakritiResultActivity"
+132-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:121:13-63
+133            android:exported="false"
+133-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:122:13-37
+134            android:theme="@style/Theme.AyurBalance.Auth" />
+134-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:123:13-58
+135
+136        <!-- Main Dashboard -->
+137        <activity
+137-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:126:9-129:56
+138            android:name="com.ayurbalance.ui.dashboard.DashboardActivity"
+138-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:127:13-59
+139            android:exported="false"
+139-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:128:13-37
+140            android:theme="@style/Theme.AyurBalance" />
+140-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:129:13-53
+141
+142        <!-- Log Food (Camera / ML identification) -->
+143        <activity
+143-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:132:9-135:56
+144            android:name="com.ayurbalance.ui.logfood.LogFoodActivity"
+144-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:133:13-55
+145            android:exported="false"
+145-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:134:13-37
+146            android:theme="@style/Theme.AyurBalance" />
+146-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:135:13-53
+147
+148        <!-- Admin Panel -->
+149        <activity
+149-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:138:9-142:61
+150            android:name="com.ayurbalance.admin.AdminLoginActivity"
+150-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:139:13-53
+151            android:exported="false"
+151-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:140:13-37
+152            android:theme="@style/Theme.AyurBalance.Auth"
+152-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:142:13-58
+153            android:windowSoftInputMode="adjustResize" />
+153-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:141:13-55
+154        <activity
+154-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:144:9-147:56
+155            android:name="com.ayurbalance.admin.AdminDashboardActivity"
+155-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:145:13-57
+156            android:exported="false"
+156-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:146:13-37
+157            android:theme="@style/Theme.AyurBalance" />
+157-->C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:147:13-53
+158        <activity
+158-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
+159            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+159-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:20:19-85
+160            android:exported="false"
+160-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:22:19-43
+161            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+161-->[com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:21:19-78
+162
+163        <meta-data
+163-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\9ce14b824124b4d63f294fc629820dc9\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+164            android:name="com.google.android.gms.version"
+164-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\9ce14b824124b4d63f294fc629820dc9\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+165            android:value="@integer/google_play_services_version" />
+165-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\9ce14b824124b4d63f294fc629820dc9\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+166
+167        <provider
+167-->[androidx.emoji2:emoji2:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\0e72aee1f6986290c10a3ec7417f7970\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+168            android:name="androidx.startup.InitializationProvider"
+168-->[androidx.emoji2:emoji2:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\0e72aee1f6986290c10a3ec7417f7970\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+169            android:authorities="com.ayurbalance.androidx-startup"
+169-->[androidx.emoji2:emoji2:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\0e72aee1f6986290c10a3ec7417f7970\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+170            android:exported="false" >
+170-->[androidx.emoji2:emoji2:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\0e72aee1f6986290c10a3ec7417f7970\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+171            <meta-data
+171-->[androidx.emoji2:emoji2:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\0e72aee1f6986290c10a3ec7417f7970\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+172                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+172-->[androidx.emoji2:emoji2:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\0e72aee1f6986290c10a3ec7417f7970\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+173                android:value="androidx.startup" />
+173-->[androidx.emoji2:emoji2:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\0e72aee1f6986290c10a3ec7417f7970\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+174            <meta-data
+174-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\dea54fb5f74d53d4049e09d565a1a8fd\transformed\gotrue-kt-debug\AndroidManifest.xml:14:13-16:52
+175                android:name="io.github.jan.supabase.gotrue.SupabaseInitializer"
+175-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\dea54fb5f74d53d4049e09d565a1a8fd\transformed\gotrue-kt-debug\AndroidManifest.xml:15:17-81
+176                android:value="androidx.startup" />
+176-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\dea54fb5f74d53d4049e09d565a1a8fd\transformed\gotrue-kt-debug\AndroidManifest.xml:16:17-49
+177            <meta-data
+177-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+178                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+178-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+179                android:value="androidx.startup" />
+179-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+180            <meta-data
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+181                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+181-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+182                android:value="androidx.startup" />
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+183            <meta-data
+183-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\13aa3b6e63b4208378644b4e7a06fdcf\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:29:13-31:52
+184                android:name="com.russhwolf.settings.SettingsInitializer"
+184-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\13aa3b6e63b4208378644b4e7a06fdcf\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:30:17-74
+185                android:value="androidx.startup" />
+185-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\13aa3b6e63b4208378644b4e7a06fdcf\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:31:17-49
+186        </provider>
+187
+188        <receiver
+188-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+189            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+190            android:directBootAware="false"
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+191            android:enabled="true"
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+192            android:exported="true"
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+193            android:permission="android.permission.DUMP" >
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+194            <intent-filter>
+194-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+195                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+196            </intent-filter>
+197            <intent-filter>
+197-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+198                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+198-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+198-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+199            </intent-filter>
+200            <intent-filter>
+200-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+201                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+202            </intent-filter>
+203            <intent-filter>
+203-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+204                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+205            </intent-filter>
+206        </receiver>
+207    </application>
+208
+209</manifest>

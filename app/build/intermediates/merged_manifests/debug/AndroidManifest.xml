@@ -10,6 +10,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- COARSE only — GPS precision not needed for climate zone detection -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <permission
         android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -113,11 +115,54 @@
             android:theme="@style/Theme.AyurBalance.Auth"
             android:windowSoftInputMode="adjustResize" />
 
+        <!-- Location Permission (between Profile Setup and Prakriti) -->
+        <activity
+            android:name="com.ayurbalance.ui.location.LocationPermissionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Assessment -->
+        <activity
+            android:name="com.ayurbalance.ui.prakriti.PrakritiQuestionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Result -->
+        <activity
+            android:name="com.ayurbalance.ui.prakriti.PrakritiResultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
         <!-- Main Dashboard -->
         <activity
             android:name="com.ayurbalance.ui.dashboard.DashboardActivity"
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Log Food (Camera / ML identification) -->
+        <activity
+            android:name="com.ayurbalance.ui.logfood.LogFoodActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Admin Panel -->
+        <activity
+            android:name="com.ayurbalance.admin.AdminLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ayurbalance.admin.AdminDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
