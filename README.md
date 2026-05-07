@@ -61,7 +61,7 @@ git clone https://github.com/itzshazan/AyurBalance.git
 
 ## 👨‍💻 Author
 
-**Ashir Kulshrestha**
+**Shazan**
 
 ---
 
