@@ -1,20 +1,26 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-151:12
-INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-151:12
-INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-151:12
-INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-151:12
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:2:1-166:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] C:\Users\HP\.gradle\caches\8.9\transforms\cd7f9afc1fedc16110d5acd9aefc4601\transformed\viewbinding-8.2.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.9\transforms\39f386559a08fee314d96e4c3057405b\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\4c8f1bdf1d9f156843dc0ad4c8e70558\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.camera:camera-video:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\096fd54deea050ed6f1c7ded390039b8\transformed\camera-video-1.3.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-lifecycle:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\d5adf891443271334620f6b396704f23\transformed\camera-lifecycle-1.3.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\f986851e524b433a29e5de49d402b66c\transformed\camera-core-1.3.1\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-view:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\74043254cb162e0185709acca0f201e7\transformed\camera-view-1.3.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\9112f9dd3481caa508200fae9b2cb20c\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\1282991055303e5baad962daf5a45cb4\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\8.9\transforms\455f1984ff2e84e6bdadf850ee2296c9\transformed\glide-4.16.0\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\a925e77f21f4996810e966d48621745a\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ca6224a084b5263ae96eadf9e473694\transformed\play-services-location-21.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\2b2afb7b0ccd16e5f250acbffae6ad3e\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\9ce14b824124b4d63f294fc629820dc9\transformed\play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\HP\.gradle\caches\8.9\transforms\9c4cc6edb828ed81d17b0e8df8cd18e4\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\HP\.gradle\caches\8.9\transforms\b44f76665439d3895f5484cdbf3b028b\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\HP\.gradle\caches\8.9\transforms\917d4c177857c930b6722216e0c9d63c\transformed\fragment-1.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment-ktx:1.6.2] C:\Users\HP\.gradle\caches\8.9\transforms\285d37b9aa9cc4f12d53d78d7577e600\transformed\fragment-ktx-1.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.8.2] C:\Users\HP\.gradle\caches\8.9\transforms\9e0cfd18de20080736ed89f17d73f939\transformed\activity-1.8.2\AndroidManifest.xml:17:1-22:12
@@ -27,7 +33,6 @@ MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\HP\.grad
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\537fff85c4c6c0451b53576c1f5afcab\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\54636e114bef5323bd38783d4793ed79\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\d2f852ae79f4e405f478562333266a88\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\481db4de7d626327e5a77311839412c7\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\1110248af2a332369230b244902d49fd\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\20c8aaa53dfcf2c2f892f53674a7bd95\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\30ffc6d953d27c1b1fe2a4e6c480bc1b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -36,11 +41,12 @@ MERGED from [io.github.jan-tennert.supabase:postgrest-kt-android-debug:2.1.4] C:
 MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\dea54fb5f74d53d4049e09d565a1a8fd\transformed\gotrue-kt-debug\AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.browser:browser:1.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\d2c5d024837cda2a248baa61c8eaef2b\transformed\browser-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\779ca28c3c3770c926ffc1200605f1f0\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\6b524bc15b538d7ae46fb467a4d0b1b7\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\ca48fc5328e5067b83541044b7573b61\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [io.github.jan-tennert.supabase:supabase-kt-android-debug:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\8b9824c75d7c69b8b647fd7fb11a1951\transformed\supabase-kt-debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\65cb348e1b33a5ffa664bc44262fbc83\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\779ca28c3c3770c926ffc1200605f1f0\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\HP\.gradle\caches\8.9\transforms\f1de312de117e622c7a56952bdf4bddc\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HP\.gradle\caches\8.9\transforms\6f9b74c1f732e117f65abd7a1561630e\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\c74822ddb18080ae89dd9b41445dc6b7\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
@@ -50,7 +56,11 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\HP\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\e72b305f2a86aff76b9b8042ca830813\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\41714ef6d079271aac02d5618029163e\transformed\core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\HP\.gradle\caches\8.9\transforms\50a44b85109a801875592572d3d11d19\transformed\core-splashscreen-1.0.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\b6160c42699ec83838d2b043787eba91\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\662cb5ab2922648899ea377761b0c6e1\transformed\room-ktx-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\afd1f1427346c677a3fad5d4d7d68973\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\HP\.gradle\caches\8.9\transforms\304c2b65533ecd393f73bbd26602ebb7\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\HP\.gradle\caches\8.9\transforms\16ce54956b8534b0a67523fb81e5d972\transformed\sqlite-2.4.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\07cf596b3f66239bad1e3fa851acf7b2\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\9976e25851f25d6fe554caac6188e750\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\HP\.gradle\caches\8.9\transforms\dc8e2b65631df9ff356521f8e1f7d034\transformed\gifdecoder-4.16.0\AndroidManifest.xml:2:1-9:12
@@ -59,9 +69,9 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.grad
 MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\13aa3b6e63b4208378644b4e7a06fdcf\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8dc3c48e8ae8628896ee0e147fc17f60\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\9f0100a22e815dcce0fb04f083784e5f\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\cebdd5f2998518fb00f37fd357b41fd9\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\c455b439922ff397902bef5c2e4aff7b\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8a49eb53707e47f09b5a67b0fdb637c8\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\cebdd5f2998518fb00f37fd357b41fd9\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\ed4586f5f382702c891f28cce0b380a2\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\15483f3b0696349babf09faf398b6369\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\a1478f0c5443c2d3d52efc89729b74e4\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -70,6 +80,11 @@ MERGED from [com.soywiz.korlibs.krypto:krypto-android:4.0.10] C:\Users\HP\.gradl
 MERGED from [com.russhwolf:multiplatform-settings-android-debug:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\86cc5e329d3fada1fede11fb5c22aead\transformed\multiplatform-settings-debug\AndroidManifest.xml:2:1-7:12
 MERGED from [co.touchlab:kermit-android-debug:2.0.3] C:\Users\HP\.gradle\caches\8.9\transforms\7911e1f97691b99733857a8109dc592a\transformed\kermit-debug\AndroidManifest.xml:2:1-7:12
 MERGED from [co.touchlab:kermit-core-android-debug:2.0.3] C:\Users\HP\.gradle\caches\8.9\transforms\ca4089f0a3440e3b1025642428551808\transformed\kermit-core-debug\AndroidManifest.xml:2:1-7:12
+MERGED from [org.tensorflow:tensorflow-lite-support:0.4.4] C:\Users\HP\.gradle\caches\8.9\transforms\eb333bbb38860680a8f3202edc4a23a0\transformed\tensorflow-lite-support-0.4.4\AndroidManifest.xml:2:1-5:12
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\d1f11021adb52b9a1352af87f875dbfe\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:2:1-11:12
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] C:\Users\HP\.gradle\caches\8.9\transforms\1da97f3f5610d62c48a5fea1b87130bb\transformed\tensorflow-lite-support-api-0.4.4\AndroidManifest.xml:2:1-5:12
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\8a9a0720f16ab5bdd3cc3e7384faabc6\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HP\.gradle\caches\8.9\transforms\4edba8de84b42afeb877c1098f48771d\transformed\image-1.0.0-beta1\AndroidManifest.xml:2:1-9:12
 	package
 		INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -90,13 +105,27 @@ uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.CAMERA
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:9:22-62
+uses-feature#android.hardware.camera
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:10:5-85
+	android:required
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:10:58-82
+	android:name
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:10:19-57
 application
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:9:5-149:19
-INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:9:5-149:19
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:12:5-164:19
+INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:12:5-164:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.9\transforms\39f386559a08fee314d96e4c3057405b\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.9\transforms\39f386559a08fee314d96e4c3057405b\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\4c8f1bdf1d9f156843dc0ad4c8e70558\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\4c8f1bdf1d9f156843dc0ad4c8e70558\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\f986851e524b433a29e5de49d402b66c\transformed\camera-core-1.3.1\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\f986851e524b433a29e5de49d402b66c\transformed\camera-core-1.3.1\AndroidManifest.xml:23:5-34:19
 MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ca6224a084b5263ae96eadf9e473694\transformed\play-services-location-21.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ca6224a084b5263ae96eadf9e473694\transformed\play-services-location-21.2.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:19:5-23:19
@@ -113,6 +142,8 @@ MERGED from [androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transform
 MERGED from [androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
 MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\13aa3b6e63b4208378644b4e7a06fdcf\transformed\multiplatform-settings-no-arg-debug\AndroidManifest.xml:23:5-33:19
@@ -121,224 +152,246 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8dc3c48e8ae8628896ee0e147fc17f60\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8a49eb53707e47f09b5a67b0fdb637c8\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8a49eb53707e47f09b5a67b0fdb637c8\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\d1f11021adb52b9a1352af87f875dbfe\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\d1f11021adb52b9a1352af87f875dbfe\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\8a9a0720f16ab5bdd3cc3e7384faabc6\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\8a9a0720f16ab5bdd3cc3e7384faabc6\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HP\.gradle\caches\8.9\transforms\4edba8de84b42afeb877c1098f48771d\transformed\image-1.0.0-beta1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HP\.gradle\caches\8.9\transforms\4edba8de84b42afeb877c1098f48771d\transformed\image-1.0.0-beta1\AndroidManifest.xml:7:5-20
 	android:extractNativeLibs
 		INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:16:9-49
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:19:9-49
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:10:9-39
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:13:9-39
 activity#com.ayurbalance.ui.splash.SplashActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:19:9-27:20
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:22:9-30:20
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:24:13-36
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:22:13-60
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:25:13-60
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:20:13-53
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:23:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:23:13-26:29
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:26:13-29:29
 action#android.intent.action.MAIN
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:28:27-74
 activity#com.ayurbalance.ui.onboarding.OnboardingActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:30:9-33:67
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:33:9-36:67
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:32:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:35:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:33:13-64
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:36:13-64
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:31:13-61
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:34:13-61
 activity#com.ayurbalance.ui.onboarding.Onboarding2Activity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:35:9-38:67
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:38:9-41:67
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:37:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:40:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:38:13-64
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:41:13-64
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:36:13-62
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:39:13-62
 activity#com.ayurbalance.ui.onboarding.Onboarding3Activity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:40:9-43:67
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:43:9-46:67
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:42:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:45:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:43:13-64
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:46:13-64
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:41:13-62
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:44:13-62
 activity#com.ayurbalance.ui.onboarding.OnboardingPrivacyActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:45:9-48:67
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:48:9-51:67
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:47:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:50:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:48:13-64
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:51:13-64
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:46:13-68
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:49:13-68
 activity#com.ayurbalance.ui.auth.SignupActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:51:9-55:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:54:9-58:61
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:54:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:57:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:53:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:56:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:55:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:58:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:52:13-51
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:55:13-51
 activity#com.ayurbalance.ui.auth.LoginActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:57:9-74:20
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:60:9-77:20
 	android:launchMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:60:13-44
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:63:13-44
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:61:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:64:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:59:13-36
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:62:13-36
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:62:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:65:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:58:13-50
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:61:13-50
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:login-callback+data:scheme:ayurbalance
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:65:13-72:29
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:68:13-75:29
 action#android.intent.action.VIEW
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:66:17-69
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:69:17-69
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:66:25-66
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:69:25-66
 category#android.intent.category.DEFAULT
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:67:17-76
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:70:17-76
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:67:27-73
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:70:27-73
 category#android.intent.category.BROWSABLE
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:68:17-78
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:71:17-78
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:68:27-75
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:71:27-75
 data
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:69:17-71:53
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:72:17-74:53
 	android:host
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:71:21-50
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:74:21-50
 	android:scheme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:70:21-49
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:73:21-49
 activity#com.ayurbalance.ui.auth.OtpVerificationActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:76:9-80:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:79:9-83:61
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:79:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:82:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:78:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:81:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:80:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:83:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:77:13-60
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:80:13-60
 activity#com.ayurbalance.ui.profile.ProfileStep1Activity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:83:9-87:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:86:9-90:61
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:86:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:89:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:85:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:88:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:87:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:90:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:84:13-60
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:87:13-60
 activity#com.ayurbalance.ui.profile.ProfileStep2Activity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:89:9-93:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:92:9-96:61
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:92:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:95:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:91:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:94:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:93:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:96:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:90:13-60
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:93:13-60
 activity#com.ayurbalance.ui.profile.ProfileStep3Activity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:95:9-99:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:98:9-102:61
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:98:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:101:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:97:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:100:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:99:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:102:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:96:13-60
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:99:13-60
 activity#com.ayurbalance.ui.profile.ProfileStep4Activity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:101:9-105:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:104:9-108:61
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:104:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:107:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:103:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:106:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:105:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:108:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:102:13-60
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:105:13-60
 activity#com.ayurbalance.ui.location.LocationPermissionActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:108:9-111:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:111:9-114:61
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:110:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:113:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:111:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:114:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:109:13-67
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:112:13-67
 activity#com.ayurbalance.ui.prakriti.PrakritiQuestionActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:114:9-117:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:117:9-120:61
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:116:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:119:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:117:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:120:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:115:13-65
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:118:13-65
 activity#com.ayurbalance.ui.prakriti.PrakritiResultActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:120:9-123:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:123:9-126:61
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:122:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:125:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:123:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:126:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:121:13-63
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:124:13-63
 activity#com.ayurbalance.ui.dashboard.DashboardActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:126:9-129:56
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:129:9-132:56
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:128:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:131:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:129:13-53
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:132:13-53
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:127:13-59
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:130:13-59
 activity#com.ayurbalance.ui.logfood.LogFoodActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:132:9-135:56
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:135:9-138:56
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:134:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:137:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:135:13-53
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:138:13-53
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:133:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:136:13-55
+activity#com.ayurbalance.ui.logfood.FoodLoggedSuccessActivity
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:141:9-144:56
+	android:exported
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:143:13-37
+	android:theme
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:144:13-53
+	android:name
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:142:13-65
+activity#com.ayurbalance.ui.meals.MealPlanActivity
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:147:9-150:56
+	android:exported
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:149:13-37
+	android:theme
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:150:13-53
+	android:name
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:148:13-54
 activity#com.ayurbalance.admin.AdminLoginActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:138:9-142:61
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:153:9-157:61
 	android:windowSoftInputMode
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:141:13-55
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:156:13-55
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:140:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:155:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:142:13-58
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:157:13-58
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:139:13-53
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:154:13-53
 activity#com.ayurbalance.admin.AdminDashboardActivity
-ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:144:9-147:56
+ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:159:9-162:56
 	android:exported
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:146:13-37
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:161:13-37
 	android:theme
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:147:13-53
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:162:13-53
 	android:name
-		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:145:13-57
+		ADDED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml:160:13-57
 uses-sdk
 INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml
@@ -349,14 +402,22 @@ MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\ca
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\HP\.gradle\caches\8.9\transforms\39f386559a08fee314d96e4c3057405b\transformed\material-1.11.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\4c8f1bdf1d9f156843dc0ad4c8e70558\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\4c8f1bdf1d9f156843dc0ad4c8e70558\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.camera:camera-video:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\096fd54deea050ed6f1c7ded390039b8\transformed\camera-video-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\096fd54deea050ed6f1c7ded390039b8\transformed\camera-video-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\d5adf891443271334620f6b396704f23\transformed\camera-lifecycle-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\d5adf891443271334620f6b396704f23\transformed\camera-lifecycle-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\f986851e524b433a29e5de49d402b66c\transformed\camera-core-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\f986851e524b433a29e5de49d402b66c\transformed\camera-core-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-view:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\74043254cb162e0185709acca0f201e7\transformed\camera-view-1.3.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-view:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\74043254cb162e0185709acca0f201e7\transformed\camera-view-1.3.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\9112f9dd3481caa508200fae9b2cb20c\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\9112f9dd3481caa508200fae9b2cb20c\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\1282991055303e5baad962daf5a45cb4\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\1282991055303e5baad962daf5a45cb4\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\8.9\transforms\455f1984ff2e84e6bdadf850ee2296c9\transformed\glide-4.16.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\8.9\transforms\455f1984ff2e84e6bdadf850ee2296c9\transformed\glide-4.16.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\a925e77f21f4996810e966d48621745a\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\a925e77f21f4996810e966d48621745a\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ca6224a084b5263ae96eadf9e473694\transformed\play-services-location-21.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ca6224a084b5263ae96eadf9e473694\transformed\play-services-location-21.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:18:5-43
@@ -365,6 +426,10 @@ MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HP\.gra
 MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\2b2afb7b0ccd16e5f250acbffae6ad3e\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\9ce14b824124b4d63f294fc629820dc9\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\9ce14b824124b4d63f294fc629820dc9\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\HP\.gradle\caches\8.9\transforms\9c4cc6edb828ed81d17b0e8df8cd18e4\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\HP\.gradle\caches\8.9\transforms\9c4cc6edb828ed81d17b0e8df8cd18e4\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\HP\.gradle\caches\8.9\transforms\b44f76665439d3895f5484cdbf3b028b\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\HP\.gradle\caches\8.9\transforms\b44f76665439d3895f5484cdbf3b028b\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\HP\.gradle\caches\8.9\transforms\917d4c177857c930b6722216e0c9d63c\transformed\fragment-1.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\HP\.gradle\caches\8.9\transforms\917d4c177857c930b6722216e0c9d63c\transformed\fragment-1.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment-ktx:1.6.2] C:\Users\HP\.gradle\caches\8.9\transforms\285d37b9aa9cc4f12d53d78d7577e600\transformed\fragment-ktx-1.6.2\AndroidManifest.xml:20:5-44
@@ -389,8 +454,6 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\HP\
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\54636e114bef5323bd38783d4793ed79\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\d2f852ae79f4e405f478562333266a88\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\d2f852ae79f4e405f478562333266a88\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\481db4de7d626327e5a77311839412c7\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\481db4de7d626327e5a77311839412c7\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\1110248af2a332369230b244902d49fd\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\1110248af2a332369230b244902d49fd\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\HP\.gradle\caches\8.9\transforms\20c8aaa53dfcf2c2f892f53674a7bd95\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -407,8 +470,8 @@ MERGED from [androidx.browser:browser:1.7.0] C:\Users\HP\.gradle\caches\8.9\tran
 MERGED from [androidx.browser:browser:1.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\d2c5d024837cda2a248baa61c8eaef2b\transformed\browser-1.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\da6332f740af1559f2c8f563ae292d5e\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\779ca28c3c3770c926ffc1200605f1f0\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\779ca28c3c3770c926ffc1200605f1f0\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\6b524bc15b538d7ae46fb467a4d0b1b7\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\6b524bc15b538d7ae46fb467a4d0b1b7\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\ca48fc5328e5067b83541044b7573b61\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\ca48fc5328e5067b83541044b7573b61\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [io.github.jan-tennert.supabase:supabase-kt-android-debug:2.1.4] C:\Users\HP\.gradle\caches\8.9\transforms\8b9824c75d7c69b8b647fd7fb11a1951\transformed\supabase-kt-debug\AndroidManifest.xml:5:5-44
@@ -417,6 +480,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\cac
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\65cb348e1b33a5ffa664bc44262fbc83\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\65cb348e1b33a5ffa664bc44262fbc83\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\779ca28c3c3770c926ffc1200605f1f0\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\779ca28c3c3770c926ffc1200605f1f0\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\HP\.gradle\caches\8.9\transforms\f1de312de117e622c7a56952bdf4bddc\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\HP\.gradle\caches\8.9\transforms\f1de312de117e622c7a56952bdf4bddc\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HP\.gradle\caches\8.9\transforms\6f9b74c1f732e117f65abd7a1561630e\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
@@ -435,8 +500,16 @@ MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\HP\.gradle\caches\8.9\trans
 MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\HP\.gradle\caches\8.9\transforms\41714ef6d079271aac02d5618029163e\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\HP\.gradle\caches\8.9\transforms\50a44b85109a801875592572d3d11d19\transformed\core-splashscreen-1.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\HP\.gradle\caches\8.9\transforms\50a44b85109a801875592572d3d11d19\transformed\core-splashscreen-1.0.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\b6160c42699ec83838d2b043787eba91\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\b6160c42699ec83838d2b043787eba91\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\662cb5ab2922648899ea377761b0c6e1\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\662cb5ab2922648899ea377761b0c6e1\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\afd1f1427346c677a3fad5d4d7d68973\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\afd1f1427346c677a3fad5d4d7d68973\transformed\annotation-experimental-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\HP\.gradle\caches\8.9\transforms\304c2b65533ecd393f73bbd26602ebb7\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\HP\.gradle\caches\8.9\transforms\304c2b65533ecd393f73bbd26602ebb7\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\HP\.gradle\caches\8.9\transforms\16ce54956b8534b0a67523fb81e5d972\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\HP\.gradle\caches\8.9\transforms\16ce54956b8534b0a67523fb81e5d972\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\07cf596b3f66239bad1e3fa851acf7b2\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\07cf596b3f66239bad1e3fa851acf7b2\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\9976e25851f25d6fe554caac6188e750\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -453,12 +526,12 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8dc3c48e8ae8628896ee0e147fc17f60\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\9f0100a22e815dcce0fb04f083784e5f\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\9f0100a22e815dcce0fb04f083784e5f\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\cebdd5f2998518fb00f37fd357b41fd9\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\cebdd5f2998518fb00f37fd357b41fd9\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\c455b439922ff397902bef5c2e4aff7b\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\c455b439922ff397902bef5c2e4aff7b\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8a49eb53707e47f09b5a67b0fdb637c8\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\HP\.gradle\caches\8.9\transforms\8a49eb53707e47f09b5a67b0fdb637c8\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\cebdd5f2998518fb00f37fd357b41fd9\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\HP\.gradle\caches\8.9\transforms\cebdd5f2998518fb00f37fd357b41fd9\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\ed4586f5f382702c891f28cce0b380a2\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\ed4586f5f382702c891f28cce0b380a2\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HP\.gradle\caches\8.9\transforms\15483f3b0696349babf09faf398b6369\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
@@ -475,10 +548,40 @@ MERGED from [co.touchlab:kermit-android-debug:2.0.3] C:\Users\HP\.gradle\caches\
 MERGED from [co.touchlab:kermit-android-debug:2.0.3] C:\Users\HP\.gradle\caches\8.9\transforms\7911e1f97691b99733857a8109dc592a\transformed\kermit-debug\AndroidManifest.xml:5:5-44
 MERGED from [co.touchlab:kermit-core-android-debug:2.0.3] C:\Users\HP\.gradle\caches\8.9\transforms\ca4089f0a3440e3b1025642428551808\transformed\kermit-core-debug\AndroidManifest.xml:5:5-44
 MERGED from [co.touchlab:kermit-core-android-debug:2.0.3] C:\Users\HP\.gradle\caches\8.9\transforms\ca4089f0a3440e3b1025642428551808\transformed\kermit-core-debug\AndroidManifest.xml:5:5-44
+MERGED from [org.tensorflow:tensorflow-lite-support:0.4.4] C:\Users\HP\.gradle\caches\8.9\transforms\eb333bbb38860680a8f3202edc4a23a0\transformed\tensorflow-lite-support-0.4.4\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-support:0.4.4] C:\Users\HP\.gradle\caches\8.9\transforms\eb333bbb38860680a8f3202edc4a23a0\transformed\tensorflow-lite-support-0.4.4\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\d1f11021adb52b9a1352af87f875dbfe\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\d1f11021adb52b9a1352af87f875dbfe\transformed\tensorflow-lite-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] C:\Users\HP\.gradle\caches\8.9\transforms\1da97f3f5610d62c48a5fea1b87130bb\transformed\tensorflow-lite-support-api-0.4.4\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-support-api:0.4.4] C:\Users\HP\.gradle\caches\8.9\transforms\1da97f3f5610d62c48a5fea1b87130bb\transformed\tensorflow-lite-support-api-0.4.4\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\8a9a0720f16ab5bdd3cc3e7384faabc6\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [org.tensorflow:tensorflow-lite-api:2.14.0] C:\Users\HP\.gradle\caches\8.9\transforms\8a9a0720f16ab5bdd3cc3e7384faabc6\transformed\tensorflow-lite-api-2.14.0\AndroidManifest.xml:6:5-7:38
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HP\.gradle\caches\8.9\transforms\4edba8de84b42afeb877c1098f48771d\transformed\image-1.0.0-beta1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] C:\Users\HP\.gradle\caches\8.9\transforms\4edba8de84b42afeb877c1098f48771d\transformed\image-1.0.0-beta1\AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
 		INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\AyurBalance\AyurBalance\app\src\main\AndroidManifest.xml
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\f986851e524b433a29e5de49d402b66c\transformed\camera-core-1.3.1\AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-core:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\f986851e524b433a29e5de49d402b66c\transformed\camera-core-1.3.1\AndroidManifest.xml:29:9-33:78
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:29:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:26:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:28:13-75
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:25:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.3.1] C:\Users\HP\.gradle\caches\8.9\transforms\b5a4293c884f57f32f829863a824bb44\transformed\camera-camera2-1.3.1\AndroidManifest.xml:31:17-103
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\3ffbd1ace07244e40c3e499f26b83d49\transformed\play-services-base-18.3.0\AndroidManifest.xml:20:9-22:45
 	android:exported
@@ -551,6 +654,16 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\cach
 		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\HP\.gradle\caches\8.9\transforms\88b3f2f8bb0a440f91d5b715576439a5\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\HP\.gradle\caches\8.9\transforms\665b97413572607a7c54925530da4023\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\HP\.gradle\caches\8.9\transforms\c3b1784ed74e4c1a3e224f10ab15e55d\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value

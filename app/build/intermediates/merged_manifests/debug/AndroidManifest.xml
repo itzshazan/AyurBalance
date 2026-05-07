@@ -12,6 +12,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- COARSE only — GPS precision not needed for climate zone detection -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Camera — used for food recognition in Log Food screen -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <permission
         android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -145,6 +151,18 @@
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
 
+        <!-- Food Logged Success (nutrition + Ayurvedic recap) -->
+        <activity
+            android:name="com.ayurbalance.ui.logfood.FoodLoggedSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Meal Plan (personalized Ayurvedic daily meal schedule) -->
+        <activity
+            android:name="com.ayurbalance.ui.meals.MealPlanActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
         <!-- Admin Panel -->
         <activity
             android:name="com.ayurbalance.admin.AdminLoginActivity"
@@ -155,6 +173,16 @@
             android:name="com.ayurbalance.admin.AdminDashboardActivity"
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
+
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+        </service>
+
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
@@ -184,6 +212,11 @@
                 android:name="com.russhwolf.settings.SettingsInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"

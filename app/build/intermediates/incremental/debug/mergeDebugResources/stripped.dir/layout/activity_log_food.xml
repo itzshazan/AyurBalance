@@ -16,11 +16,12 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <!-- Simulated camera background -->
-        <View
+        <!-- CameraX live preview -->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/cameraPreview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#1E2B1A" />
+            app:scaleType="fillCenter" />
 
         <!-- Viewfinder overlay (brackets + focus ring) -->
         <com.ayurbalance.ui.logfood.ViewfinderView

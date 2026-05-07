@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboardRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_cream">
+
+    <!-- ── Main column ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ═══════════════════════════════════ -->
+        <!--  HEADER                             -->
+        <!-- ═══════════════════════════════════ -->
+        <LinearLayout
+            android:id="@+id/headerSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_result_header"
+            android:orientation="vertical"
+            android:paddingHorizontal="18dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Top row: greeting + name | profile circle -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Left: greeting, name, streak pill -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGreeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Good morning,"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seeker"
+                        android:textColor="@color/white"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <!-- Streak pill -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_streak_badge"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔥"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvStreak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="DAYS STREAK"
+                            android:textColor="#CCFFFFFF"
+                            android:textSize="10sp"
+                            android:letterSpacing="0.05" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Right: profile circle (avatar photo or initial letter) -->
+                <FrameLayout
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/bg_profile_circle">
+
+                    <ImageView
+                        android:id="@+id/ivUserAvatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvUserInitial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="S"
+                        android:textColor="@color/primary_green"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- Day · Season -->
+            <TextView
+                android:id="@+id/tvDayRitu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="—"
+                android:textColor="#99FFFFFF"
+                android:textSize="12sp"
+                android:letterSpacing="0.04" />
+
+        </LinearLayout>
+
+        <!-- ═══════════════════════════════════ -->
+        <!--  SCROLLABLE BODY                    -->
+        <!-- ═══════════════════════════════════ -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- ── Imbalance Alert ── -->
+                <LinearLayout
+                    android:id="@+id/alertCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_alert_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="⚡"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAlertTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_heading_dark"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAlertDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/text_body"
+                            android:textSize="11sp"
+                            android:lineSpacingMultiplier="1.3" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnCalm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_calm_button"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="7dp"
+                        android:text="CALM"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.06" />
+
+                </LinearLayout>
+
+                <!-- ── Dosha Balance Card ── -->
+                <LinearLayout
+                    android:id="@+id/doshaCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_live_analysis_card"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:letterSpacing="0.1"
+                        android:text="CURRENT DOSHA BALANCE"
+                        android:textColor="@color/text_caption"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <!-- Vata row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_dot_vata" />
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Vata"
+                            android:textColor="@color/vata_purple"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:id="@+id/trackVata"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/progress_track_light">
+
+                            <View
+                                android:id="@+id/fillVata"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_dosha_bar_vata" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/tvVataPercent"
+                            android:layout_width="42dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="—"
+                            android:textColor="@color/vata_purple"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Pitta row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_dot_pitta" />
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Pitta"
+                            android:textColor="@color/pitta_terracotta"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:id="@+id/trackPitta"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/progress_track_light">
+
+                            <View
+                                android:id="@+id/fillPitta"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_dosha_bar_pitta" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/tvPittaPercent"
+                            android:layout_width="42dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="—"
+                            android:textColor="@color/pitta_terracotta"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Kapha row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bg_dot_kapha" />
+
+                        <TextView
+                            android:layout_width="52dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Kapha"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:id="@+id/trackKapha"
+                            android:layout_width="0dp"
+                            android:layout_height="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/progress_track_light">
+
+                            <View
+                                android:id="@+id/fillKapha"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_dosha_bar_kapha" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/tvKaphaPercent"
+                            android:layout_width="42dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="—"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- ── Next Meal Card ── -->
+                <LinearLayout
+                    android:id="@+id/mealCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_live_analysis_card"
+                    android:orientation="horizontal"
+                    android:minHeight="96dp">
+
+                    <!-- Left: teal panel with emoji -->
+                    <LinearLayout
+                        android:layout_width="72dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_meal_color_panel"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvMealEmoji"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🍛"
+                            android:textSize="28sp" />
+
+                    </LinearLayout>
+
+                    <!-- Right: meal info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:id="@+id/tvMealTimeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:letterSpacing="0.08"
+                            android:text="NEXT MEAL · 1:00 PM"
+                            android:textColor="@color/text_caption"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvMealName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Moong dal khichdi"
+                            android:textColor="@color/text_heading_dark"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="serif" />
+
+                        <TextView
+                            android:id="@+id/tvMealInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="320 kcal · Pitta-pacifying"
+                            android:textColor="@color/text_caption"
+                            android:textSize="11sp" />
+
+                        <!-- Macro tags -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvCarbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/bg_macro_tag"
+                                android:paddingHorizontal="7dp"
+                                android:paddingVertical="3dp"
+                                android:text="42g Carbs"
+                                android:textColor="@color/text_body"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tvProtein"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/bg_macro_tag"
+                                android:paddingHorizontal="7dp"
+                                android:paddingVertical="3dp"
+                                android:text="14g Protein"
+                                android:textColor="@color/text_body"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tvFats"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_macro_tag"
+                                android:paddingHorizontal="7dp"
+                                android:paddingVertical="3dp"
+                                android:text="8g Fats"
+                                android:textColor="@color/text_body"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- ── Wellness Row ── -->
+                <LinearLayout
+                    android:id="@+id/wellnessRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Hydration Card -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/bg_live_analysis_card"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="14dp">
+
+                        <com.ayurbalance.ui.dashboard.CircularProgressView
+                            android:id="@+id/progressHydration"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:letterSpacing="0.1"
+                            android:text="HYDRATION"
+                            android:textColor="@color/text_caption"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvHydration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="1.2L / 2L"
+                            android:textColor="@color/text_heading_dark"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Prana Card -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/bg_live_analysis_card"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="14dp">
+
+                        <com.ayurbalance.ui.dashboard.CircularProgressView
+                            android:id="@+id/progressPrana"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:letterSpacing="0.1"
+                            android:text="PRANA"
+                            android:textColor="@color/text_caption"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPrana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="8 / min"
+                            android:textColor="@color/text_heading_dark"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Bottom padding so content clears FAB -->
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- ═══════════════════════════════════ -->
+        <!--  BOTTOM NAVIGATION                  -->
+        <!-- ═══════════════════════════════════ -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/surface_cream"
+            app:itemIconTint="@color/bottom_nav_item_color"
+            app:itemTextColor="@color/bottom_nav_item_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_home"
+            app:elevation="8dp" />
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════ -->
+    <!--  FAB CAMERA                         -->
+    <!-- ═══════════════════════════════════ -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/primary_green"
+        app:srcCompat="@drawable/ic_camera"
+        app:tint="@color/white"
+        app:fabSize="normal"
+        app:elevation="6dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

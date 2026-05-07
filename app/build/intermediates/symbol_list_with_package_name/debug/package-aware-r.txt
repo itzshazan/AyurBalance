@@ -650,6 +650,7 @@ attr imagePanX
 attr imagePanY
 attr imageRotate
 attr imageZoom
+attr implementationMode
 attr indeterminateAnimationType
 attr indeterminateProgressStyle
 attr indicatorColor
@@ -1017,6 +1018,7 @@ attr round
 attr roundPercent
 attr saturation
 attr scaleFromTextSize
+attr scaleType
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
@@ -3104,6 +3106,8 @@ drawable bg_admin_metric_card
 drawable bg_ai_label
 drawable bg_alert_card
 drawable bg_analysis_card
+drawable bg_ayurvedic_chip
+drawable bg_ayurvedic_section
 drawable bg_badge_circle_green
 drawable bg_badge_circle_orange
 drawable bg_botanical_corner
@@ -3112,10 +3116,12 @@ drawable bg_btn_ghost
 drawable bg_btn_primary
 drawable bg_btn_secondary
 drawable bg_calm_button
+drawable bg_check_circle
 drawable bg_chip_bullet
 drawable bg_chip_bullet_selected
 drawable bg_circle_badge
 drawable bg_confidence_badge
+drawable bg_daily_progress_card
 drawable bg_diet_card_selected
 drawable bg_dosha_bar_kapha
 drawable bg_dosha_bar_pitta
@@ -3153,6 +3159,9 @@ drawable bg_login_card
 drawable bg_macro_chip
 drawable bg_macro_tag
 drawable bg_meal_color_panel
+drawable bg_meal_icon_container
+drawable bg_meal_plan_card
+drawable bg_nutrition_card
 drawable bg_onboarding_bottom
 drawable bg_otp_box
 drawable bg_otp_box_error
@@ -3165,12 +3174,16 @@ drawable bg_progress_fill
 drawable bg_progress_track
 drawable bg_result_header
 drawable bg_result_icon_circle
+drawable bg_seasonal_card
 drawable bg_section_icon_circle
+drawable bg_skeleton_card
 drawable bg_sleep_card
 drawable bg_sleep_slider_track
 drawable bg_slider_thumb
 drawable bg_social_button
 drawable bg_streak_badge
+drawable bg_success_header
+drawable bg_swap_btn
 drawable bg_tag_neutral
 drawable bg_tag_pitta
 drawable bg_trust_badge_card
@@ -3179,6 +3192,7 @@ drawable bg_unit_toggle_group
 drawable bg_unit_unselected
 drawable bg_vision_pill
 drawable bg_week_badge
+drawable bg_week_day_selected
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3476,6 +3490,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id ayurvedicSection
 id badgeContainer
 id badgeLock
 id badgeShield
@@ -3557,20 +3572,26 @@ id btnSkipNow
 id btnUserAction
 id btnUserView
 id btnVerify
+id btnViewJournal
 id buttonPanel
 id cache_measures
 id callMeasure
+id cameraPreview
 id cancel_button
+id cardCalories
+id cardCarbs
 id cardCurrentState
 id cardDau
 id cardDigestion
 id cardEnergy
+id cardFat
 id cardFitness
 id cardGraph
 id cardKapha
 id cardModerate
 id cardNonVeg
 id cardPitta
+id cardProtein
 id cardSedentary
 id cardStress
 id cardTotalUsers
@@ -3591,21 +3612,25 @@ id chain
 id chain2
 id chains
 id chartContainer
+id checkCircle
 id checkbox
 id checked
 id chipActive
 id chipAll
 id chipDiabetes
 id chipDigestive
+id chipDoshaEffect
 id chipFlagged
 id chipFoodAll
 id chipFoodFlagged
 id chipFoodIcmr
 id chipFoodUsda
+id chipGuna
 id chipHypertension
 id chipInactive
 id chipInsomnia
 id chipPCOS
+id chipRasa
 id chipThyroid
 id chronometer
 id circle_center
@@ -3616,6 +3641,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id compatible
 id compress
 id confirm_button
 id constraint
@@ -3633,6 +3659,8 @@ id currentState
 id custom
 id customPanel
 id cut
+id dailyProgressCard
+id dailyProgressCircle
 id dark
 id dashboardRoot
 id date_picker_actions
@@ -3732,11 +3760,14 @@ id expanded_menu
 id fabCamera
 id fade
 id fill
+id fillCenter
+id fillEnd
 id fillHighConf
 id fillKapha
 id fillLowConf
 id fillMidConf
 id fillPitta
+id fillStart
 id fillVata
 id fill_horizontal
 id fill_vertical
@@ -3810,6 +3841,7 @@ id info
 id infoCard
 id invisible
 id inward
+id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id ivGraph
@@ -3867,6 +3899,7 @@ id material_timepicker_view
 id material_value_index
 id matrix
 id mealCard
+id mealPlanRoot
 id message
 id metricsRow
 id middle
@@ -3934,6 +3967,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id nutritionGrid
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3971,9 +4005,11 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id performance
 id phoneFrame
 id phoneScreen
 id pin
+id pooling_container_listener_holder_tag
 id position
 id postLayout
 id prakritiRoot
@@ -4021,8 +4057,10 @@ id row_index_key
 id rvActivityLog
 id rvAlerts
 id rvFoodItems
+id rvMealCards
 id rvRecipes
 id rvServices
+id rvSwapOptions
 id rvUsers
 id save_non_transition_alpha
 id save_overlay_view
@@ -4046,12 +4084,14 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id seasonalCard
 id seekSleep
 id select_dialog_listview
 id selected
 id selection_type
 id sharedValueSet
 id sharedValueUnset
+id shimmerLayout
 id shortcut
 id showCustom
 id showHome
@@ -4092,6 +4132,8 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id successHeader
+id successRoot
 id supportScrollUp
 id tabBarcode
 id tabCamera
@@ -4171,9 +4213,13 @@ id tvAppName
 id tvAssessments
 id tvAvgConfidence
 id tvAvgLatency
+id tvAyurvedicInsight
+id tvBackToDashboard
 id tvBrand
 id tvBrandName
 id tvCalorieTag
+id tvCalories
+id tvCancel
 id tvCarbs
 id tvClimateZone
 id tvClimateZonePreview
@@ -4185,7 +4231,10 @@ id tvConfirmError
 id tvConfirmLabel
 id tvConstitutionNote
 id tvCreateAccount
+id tvCurrentRitu
 id tvCurrentStateLabel
+id tvDailyConsumed
+id tvDailyGoal
 id tvDashboardDate
 id tvDau
 id tvDauDelta
@@ -4209,6 +4258,7 @@ id tvEmailLabel
 id tvEnergyValue
 id tvErrorRate
 id tvFallbackRate
+id tvFat
 id tvFats
 id tvFlaggedCount
 id tvFoodCalories
@@ -4236,9 +4286,13 @@ id tvLogTime
 id tvLogin
 id tvLoginError
 id tvMealEmoji
+id tvMealIcon
 id tvMealInfo
+id tvMealMeta
 id tvMealName
 id tvMealTimeLabel
+id tvMealType
+id tvMealTypeTime
 id tvMeals
 id tvMentalInsight
 id tvModelSize
@@ -4273,6 +4327,9 @@ id tvRegionName
 id tvResend
 id tvRisksInsight
 id tvScanStatus
+id tvSeasonalDesc
+id tvSeasonalGuidance
+id tvSeasonalRitu
 id tvServiceName
 id tvServiceStatus
 id tvSleepHours
@@ -4283,6 +4340,12 @@ id tvStepTitle
 id tvStreak
 id tvSubtext
 id tvSubtitle
+id tvSuccessFoodName
+id tvSwapBtn
+id tvSwapCurrentMeal
+id tvSwapMealMeta
+id tvSwapMealName
+id tvSwapSelect
 id tvTagline
 id tvTermsError
 id tvTermsText
@@ -4321,6 +4384,8 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id weekDayContainer
+id weekScrollView
 id wellnessRow
 id west
 id wide
@@ -4451,9 +4516,11 @@ layout abc_tooltip
 layout activity_admin_dashboard
 layout activity_admin_login
 layout activity_dashboard
+layout activity_food_logged_success
 layout activity_location_permission
 layout activity_log_food
 layout activity_login
+layout activity_meal_plan
 layout activity_onboarding
 layout activity_onboarding2
 layout activity_onboarding3
@@ -4467,6 +4534,7 @@ layout activity_profile_step3
 layout activity_profile_step4
 layout activity_signup
 layout activity_splash
+layout bottom_sheet_swap_meal
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -4499,9 +4567,11 @@ layout include_compliance_row
 layout item_activity_log
 layout item_deletion_row
 layout item_food_item
+layout item_meal_card
 layout item_recipe_row
 layout item_region_dropdown
 layout item_service_row
+layout item_swap_meal
 layout item_user_row
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -5280,6 +5350,8 @@ style Base_v21_Theme_SplashScreen
 style Base_v21_Theme_SplashScreen_Light
 style Base_v27_Theme_SplashScreen
 style Base_v27_Theme_SplashScreen_Light
+style BottomSheetDialogTheme
+style BottomSheetStyle
 style CardView
 style CardView_Dark
 style CardView_Light
@@ -6231,6 +6303,7 @@ styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
+styleable PreviewView implementationMode scaleType
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RadialViewGroup materialCircleRadius
 styleable RangeSlider minSeparation values

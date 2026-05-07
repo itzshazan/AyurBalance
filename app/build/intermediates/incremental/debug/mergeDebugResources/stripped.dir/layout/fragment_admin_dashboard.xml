@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Date line -->
+        <TextView
+            android:id="@+id/tvDashboardDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Tuesday, 22 Apr 2026 · 09:41 IST"
+            android:textColor="@color/text_caption"
+            android:textSize="11sp" />
+
+        <!-- Metric cards row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/cardTotalUsers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Total users" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvTotalUsers" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="24,871" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvTotalUsersDelta" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="+312 this week" android:textColor="@color/admin_accent" android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardDau"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="DAU" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvDau" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="8,204" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvDauDelta" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="+5.2% vs last week" android:textColor="@color/admin_accent" android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Metric cards row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Assessments done" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvAssessments" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="21,430" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="86% completion rate" android:textColor="@color/admin_accent" android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Meals logged today" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvMeals" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="31,560" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="+8% vs yesterday" android:textColor="@color/admin_accent" android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- User growth chart card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="User growth — 7 days" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:id="@+id/chartContainer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="3dp">
+                    <View android:id="@+id/barW" android:layout_width="match_parent" android:layout_height="33dp" android:layout_gravity="bottom" android:background="@color/admin_accent_light" /></FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="3dp">
+                    <View android:id="@+id/barT1" android:layout_width="match_parent" android:layout_height="37dp" android:layout_gravity="bottom" android:background="@color/admin_accent_light" /></FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="3dp">
+                    <View android:id="@+id/barF" android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="bottom" android:background="@color/admin_accent_light" /></FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="3dp">
+                    <View android:id="@+id/barS1" android:layout_width="match_parent" android:layout_height="42dp" android:layout_gravity="bottom" android:background="@color/admin_accent_light" /></FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="3dp">
+                    <View android:id="@+id/barS2" android:layout_width="match_parent" android:layout_height="45dp" android:layout_gravity="bottom" android:background="@color/admin_accent_light" /></FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="3dp">
+                    <View android:id="@+id/barM" android:layout_width="match_parent" android:layout_height="53dp" android:layout_gravity="bottom" android:background="@color/admin_accent_light" /></FrameLayout>
+                <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <View android:id="@+id/barT2" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="bottom" android:background="@color/admin_accent" /></FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="W" android:textColor="@color/text_caption" android:textSize="10sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="T" android:textColor="@color/text_caption" android:textSize="10sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="F" android:textColor="@color/text_caption" android:textSize="10sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="S" android:textColor="@color/text_caption" android:textSize="10sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="S" android:textColor="@color/text_caption" android:textSize="10sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="M" android:textColor="@color/text_caption" android:textSize="10sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="T" android:textColor="@color/admin_accent" android:textSize="10sp" android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Constitution distribution -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Constitution distribution" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+            <!-- Vata -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Vata" android:textColor="@color/text_body" android:textSize="12sp" />
+                <FrameLayout android:layout_width="0dp" android:layout_height="6dp" android:layout_weight="1" android:id="@+id/trackVata">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_track" />
+                    <View android:id="@+id/fillVata" android:layout_width="0dp" android:layout_height="match_parent" android:background="@drawable/bg_progress_fill" />
+                </FrameLayout>
+                <TextView android:layout_width="36dp" android:layout_height="wrap_content" android:gravity="end" android:text="34%" android:textColor="@color/admin_accent" android:textSize="12sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Pitta -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Pitta" android:textColor="@color/text_body" android:textSize="12sp" />
+                <FrameLayout android:layout_width="0dp" android:layout_height="6dp" android:layout_weight="1" android:id="@+id/trackPitta">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_track" />
+                    <View android:id="@+id/fillPitta" android:layout_width="0dp" android:layout_height="match_parent" android:background="@drawable/bg_dosha_bar_vata" />
+                </FrameLayout>
+                <TextView android:layout_width="36dp" android:layout_height="wrap_content" android:gravity="end" android:text="28%" android:textColor="@color/vata_purple" android:textSize="12sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Kapha -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Kapha" android:textColor="@color/text_body" android:textSize="12sp" />
+                <FrameLayout android:layout_width="0dp" android:layout_height="6dp" android:layout_weight="1" android:id="@+id/trackKapha">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_track" />
+                    <View android:id="@+id/fillKapha" android:layout_width="0dp" android:layout_height="match_parent" android:background="@drawable/bg_dosha_bar_kapha" />
+                </FrameLayout>
+                <TextView android:layout_width="36dp" android:layout_height="wrap_content" android:gravity="end" android:text="18%" android:textColor="@color/primary_green" android:textSize="12sp" android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Recent alerts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Recent alerts" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAlerts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
