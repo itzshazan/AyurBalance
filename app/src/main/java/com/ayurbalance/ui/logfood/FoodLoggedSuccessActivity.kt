@@ -13,7 +13,9 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.ayurbalance.R
 import com.ayurbalance.databinding.ActivityFoodLoggedSuccessBinding
 import com.ayurbalance.ui.dashboard.DashboardActivity
+import com.ayurbalance.ui.analytics.AnalyticsActivity
 import com.ayurbalance.ui.meals.MealPlanActivity
+import com.ayurbalance.ui.profile.ProfileActivity
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -106,6 +108,16 @@ class FoodLoggedSuccessActivity : AppCompatActivity() {
                 R.id.navHome  -> { navigateToDashboard(); true }
                 R.id.navMeals -> {
                     startActivity(Intent(this, MealPlanActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+                    true
+                }
+                R.id.navAnalytics -> {
+                    startActivity(Intent(this, AnalyticsActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+                    true
+                }
+                R.id.navProfile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java)
                         .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
                     true
                 }

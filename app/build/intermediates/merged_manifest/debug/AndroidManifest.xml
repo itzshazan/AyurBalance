@@ -18,6 +18,9 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+    <!-- Notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <permission
         android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -162,6 +165,35 @@
             android:name="com.ayurbalance.ui.meals.MealPlanActivity"
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Analytics (7-day wellness trends + dosha alignment) -->
+        <activity
+            android:name="com.ayurbalance.ui.analytics.AnalyticsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Profile Screen -->
+        <activity
+            android:name="com.ayurbalance.ui.profile.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Prakriti Detail (from Profile) -->
+        <activity
+            android:name="com.ayurbalance.ui.profile.PrakritiDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Privacy Settings (from Profile) -->
+        <activity
+            android:name="com.ayurbalance.ui.profile.PrivacySettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Notification broadcast receiver -->
+        <receiver
+            android:name="com.ayurbalance.ui.profile.NotificationBroadcastReceiver"
+            android:exported="false" />
 
         <!-- Admin Panel -->
         <activity

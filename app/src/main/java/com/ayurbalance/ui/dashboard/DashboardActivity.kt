@@ -14,8 +14,10 @@ import androidx.core.view.WindowInsetsControllerCompat
 import android.content.Intent
 import com.ayurbalance.R
 import com.ayurbalance.databinding.ActivityDashboardBinding
+import com.ayurbalance.ui.analytics.AnalyticsActivity
 import com.ayurbalance.ui.logfood.LogFoodActivity
 import com.ayurbalance.ui.meals.MealPlanActivity
+import com.ayurbalance.ui.profile.ProfileActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.request.RequestOptions
@@ -202,8 +204,18 @@ class DashboardActivity : AppCompatActivity() {
                         .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
                     true
                 }
-                R.id.navMeals   -> {
+                R.id.navMeals -> {
                     startActivity(Intent(this, MealPlanActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+                    true
+                }
+                R.id.navAnalytics -> {
+                    startActivity(Intent(this, AnalyticsActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+                    true
+                }
+                R.id.navProfile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java)
                         .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
                     true
                 }

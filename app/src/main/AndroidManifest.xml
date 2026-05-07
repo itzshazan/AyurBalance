@@ -8,6 +8,9 @@
     <!-- Camera — used for food recognition in Log Food screen -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- Notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:name=".AyurBalanceApp"
@@ -148,6 +151,35 @@
             android:name=".ui.meals.MealPlanActivity"
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Analytics (7-day wellness trends + dosha alignment) -->
+        <activity
+            android:name=".ui.analytics.AnalyticsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Profile Screen -->
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Prakriti Detail (from Profile) -->
+        <activity
+            android:name=".ui.profile.PrakritiDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Privacy Settings (from Profile) -->
+        <activity
+            android:name=".ui.profile.PrivacySettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Notification broadcast receiver -->
+        <receiver
+            android:name=".ui.profile.NotificationBroadcastReceiver"
+            android:exported="false" />
 
         <!-- Admin Panel -->
         <activity

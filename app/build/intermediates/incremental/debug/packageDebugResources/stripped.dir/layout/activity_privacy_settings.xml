@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/privacyRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/surface_cream">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingTop="56dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="←"
+            android:textSize="22sp"
+            android:textColor="@color/text_body"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Privacy &amp; Data"
+            android:textColor="@color/text_heading_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="32dp">
+
+            <!-- Info card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_insight_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your health data is protected with row-level security. Only you can view and control your wellness information."
+                    android:textColor="@color/text_body"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" />
+
+            </LinearLayout>
+
+            <!-- Action rows -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_analytics_card"
+                android:layout_marginTop="16dp"
+                android:elevation="2dp">
+
+                <!-- Manage permissions -->
+                <LinearLayout
+                    android:id="@+id/rowManagePermissions"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Manage App Permissions"
+                        android:textColor="@color/text_body" android:textSize="14sp"/>
+
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.35"
+                        android:contentDescription="@null"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp" android:background="@color/divider_light"/>
+
+                <!-- AI policy -->
+                <LinearLayout
+                    android:id="@+id/rowAiPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="AI Usage Transparency"
+                        android:textColor="@color/text_body" android:textSize="14sp"/>
+
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.35"
+                        android:contentDescription="@null"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp" android:background="@color/divider_light"/>
+
+                <!-- Health policy -->
+                <LinearLayout
+                    android:id="@+id/rowHealthPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Health Data Policy"
+                        android:textColor="@color/text_body" android:textSize="14sp"/>
+
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.35"
+                        android:contentDescription="@null"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp" android:background="@color/divider_light"/>
+
+                <!-- Export data -->
+                <LinearLayout
+                    android:id="@+id/rowExportData"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Export My Data"
+                        android:textColor="@color/text_body" android:textSize="14sp"/>
+
+                    <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.35"
+                        android:contentDescription="@null"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Delete account -->
+            <LinearLayout
+                android:id="@+id/rowDeleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="4dp"
+                android:layout_marginTop="20dp"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Delete Account &amp; All Data"
+                    android:textColor="#C4572A" android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

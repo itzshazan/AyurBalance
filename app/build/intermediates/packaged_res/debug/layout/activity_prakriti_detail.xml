@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prakritiDetailRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/surface_cream">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/primary_green"
+        android:gravity="center"
+        android:paddingBottom="28dp">
+
+        <!-- Back button row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="60dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="←"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:paddingHorizontal="4dp" />
+
+        </LinearLayout>
+
+        <!-- Dosha emoji -->
+        <FrameLayout
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_result_icon_circle"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvDoshaEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="🌿"
+                android:textSize="32sp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvDominantDosha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prakriti"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tvDoshaElements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textColor="#A0FFFFFF"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- Scrollable body -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Dosha percentages card -->
+            <LinearLayout
+                android:id="@+id/doshaCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_analytics_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YOUR CONSTITUTION"
+                    android:textColor="@color/text_caption"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.08"
+                    android:fontFamily="sans-serif-medium" />
+
+                <!-- Vata -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="14dp">
+
+                    <TextView android:layout_width="48dp" android:layout_height="wrap_content"
+                        android:text="Vāta" android:textColor="@color/vata_purple"
+                        android:textSize="13sp" android:fontFamily="sans-serif-medium"/>
+
+                    <FrameLayout android:id="@+id/trackVata"
+                        android:layout_width="0dp" android:layout_height="8dp"
+                        android:layout_weight="1" android:background="@drawable/bg_macro_track">
+                        <View android:id="@+id/fillVata" android:layout_width="0dp"
+                            android:layout_height="match_parent" android:background="@drawable/bg_dosha_bar_vata"/>
+                    </FrameLayout>
+
+                    <TextView android:id="@+id/tvVataPct"
+                        android:layout_width="40dp" android:layout_height="wrap_content"
+                        android:text="0%" android:textColor="@color/vata_purple"
+                        android:textSize="13sp" android:gravity="end" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Pitta -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp">
+
+                    <TextView android:layout_width="48dp" android:layout_height="wrap_content"
+                        android:text="Pitta" android:textColor="@color/pitta_terracotta"
+                        android:textSize="13sp" android:fontFamily="sans-serif-medium"/>
+
+                    <FrameLayout android:id="@+id/trackPitta"
+                        android:layout_width="0dp" android:layout_height="8dp"
+                        android:layout_weight="1" android:background="@drawable/bg_macro_track">
+                        <View android:id="@+id/fillPitta" android:layout_width="0dp"
+                            android:layout_height="match_parent" android:background="@drawable/bg_dosha_bar_pitta"/>
+                    </FrameLayout>
+
+                    <TextView android:id="@+id/tvPittaPct"
+                        android:layout_width="40dp" android:layout_height="wrap_content"
+                        android:text="0%" android:textColor="@color/pitta_terracotta"
+                        android:textSize="13sp" android:gravity="end" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Kapha -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp">
+
+                    <TextView android:layout_width="48dp" android:layout_height="wrap_content"
+                        android:text="Kapha" android:textColor="@color/primary_green"
+                        android:textSize="13sp" android:fontFamily="sans-serif-medium"/>
+
+                    <FrameLayout android:id="@+id/trackKapha"
+                        android:layout_width="0dp" android:layout_height="8dp"
+                        android:layout_weight="1" android:background="@drawable/bg_macro_track">
+                        <View android:id="@+id/fillKapha" android:layout_width="0dp"
+                            android:layout_height="match_parent" android:background="@drawable/bg_dosha_bar_kapha"/>
+                    </FrameLayout>
+
+                    <TextView android:id="@+id/tvKaphaPct"
+                        android:layout_width="40dp" android:layout_height="wrap_content"
+                        android:text="0%" android:textColor="@color/primary_green"
+                        android:textSize="13sp" android:gravity="end" android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Traits card -->
+            <LinearLayout
+                android:id="@+id/traitsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_analytics_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="12dp"
+                android:elevation="2dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="DOSHA QUALITIES"
+                    android:textColor="@color/text_caption" android:textSize="10sp"
+                    android:letterSpacing="0.08" android:fontFamily="sans-serif-medium"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Vāta" android:textColor="@color/vata_purple"
+                    android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+                <TextView android:id="@+id/tvVataTraits"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_body" android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" android:layout_marginTop="4dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pitta" android:textColor="@color/pitta_terracotta"
+                    android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="14dp"/>
+                <TextView android:id="@+id/tvPittaTraits"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_body" android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" android:layout_marginTop="4dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Kapha" android:textColor="@color/primary_green"
+                    android:textSize="13sp" android:textStyle="bold" android:layout_marginTop="14dp"/>
+                <TextView android:id="@+id/tvKaphaTraits"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_body" android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <!-- Recommendations card -->
+            <LinearLayout
+                android:id="@+id/recommendationsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_insight_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="12dp"
+                android:elevation="2dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🌿  Recommendations for You"
+                    android:textColor="@color/primary_green_dark"
+                    android:textSize="13sp" android:textStyle="bold"/>
+
+                <TextView android:id="@+id/tvRecommendations"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_body" android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.6" android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+            <!-- Retake button -->
+            <TextView
+                android:id="@+id/btnRetake"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="Retake Assessment"
+                android:textColor="@color/text_caption"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:foreground="?attr/selectableItemBackground" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

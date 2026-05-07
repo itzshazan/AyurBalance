@@ -19,7 +19,9 @@ import com.ayurbalance.R
 import com.ayurbalance.databinding.ActivityMealPlanBinding
 import com.ayurbalance.data.models.MealItem
 import com.ayurbalance.data.models.SeasonalProtocol
+import com.ayurbalance.ui.analytics.AnalyticsActivity
 import com.ayurbalance.ui.logfood.LogFoodActivity
+import com.ayurbalance.ui.profile.ProfileActivity
 import java.time.LocalDate
 import java.time.format.TextStyle
 import java.util.Locale
@@ -202,8 +204,18 @@ class MealPlanActivity : AppCompatActivity(), SwapMealBottomSheet.SwapListener {
                         .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
                     true
                 }
-                R.id.navMeals    -> true
-                else             -> true
+                R.id.navMeals     -> true
+                R.id.navAnalytics -> {
+                    startActivity(Intent(this, AnalyticsActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+                    true
+                }
+                R.id.navProfile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+                    true
+                }
+                else -> true
             }
         }
     }
