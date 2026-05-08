@@ -2,119 +2,98 @@ package com.ayurbalance.ui.logfood
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.util.Log
-import org.tensorflow.lite.Interpreter
-import java.io.FileInputStream
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
-import java.nio.MappedByteBuffer
-import java.nio.channels.FileChannel
+import com.google.mlkit.vision.common.InputImage
+import com.google.mlkit.vision.label.ImageLabeling
+import com.google.mlkit.vision.label.defaults.ImageLabelerOptions
 
+/**
+ * On-device food classifier powered by Google ML Kit Image Labeling.
+ * Requires no model file — the built-in model (~600 categories from Open Images)
+ * recognises common Indian and global foods: biryani, curry, samosa, dosa, naan, etc.
+ */
 class FoodClassifier(private val context: Context) {
 
     companion object {
-        private const val TAG = "FoodClassifier"
-        private const val MODEL_FILE = "food_model.tflite"
-        private const val LABELS_FILE = "food_labels.txt"
-        private const val INPUT_SIZE = 224
-        private const val NUM_THREADS = 4
+        private const val CONFIDENCE_THRESHOLD = 0.30f
         private const val TOP_K = 3
-        private const val CONFIDENCE_THRESHOLD = 0.05f  // 5% minimum
     }
 
-    private var interpreter: Interpreter? = null
-    private val labels = mutableListOf<String>()
+    private val labeler = ImageLabeling.getClient(
+        ImageLabelerOptions.Builder()
+            .setConfidenceThreshold(CONFIDENCE_THRESHOLD)
+            .build()
+    )
+
     private var ready = false
 
-    // Input: [1, 224, 224, 3] float32 — reused across calls to avoid allocation
-    private val inputBuffer: ByteBuffer = ByteBuffer
-        .allocateDirect(4 * INPUT_SIZE * INPUT_SIZE * 3)
-        .apply { order(ByteOrder.nativeOrder()) }
-
     fun initialize(): Boolean {
-        return try {
-            val model = loadModelBuffer()
-            val options = Interpreter.Options().apply { numThreads = NUM_THREADS }
-            interpreter = Interpreter(model, options)
-            loadLabels()
-            ready = true
-            Log.i(TAG, "Initialized: ${labels.size} labels, input ${INPUT_SIZE}x${INPUT_SIZE}")
-            true
-        } catch (e: Exception) {
-            Log.e(TAG, "Init failed — place food_model.tflite in app/src/main/assets/: ${e.message}")
-            false
-        }
+        ready = true
+        return true
     }
 
-    private fun loadModelBuffer(): MappedByteBuffer {
-        val fd = context.assets.openFd(MODEL_FILE)
-        return FileInputStream(fd.fileDescriptor).channel.map(
-            FileChannel.MapMode.READ_ONLY,
-            fd.startOffset,
-            fd.declaredLength
-        )
-    }
+    /**
+     * Async classification — result delivered on the calling thread via [callback].
+     * Call [imageProxy.close()] BEFORE calling this (already done in LogFoodActivity).
+     */
+    fun classify(bitmap: Bitmap, callback: (List<FoodPrediction>) -> Unit) {
+        val image = InputImage.fromBitmap(bitmap, 0)
+        labeler.process(image)
+            .addOnSuccessListener { labels ->
+                // Prefer food-specific labels, fall back to top-3 overall
+                val foodLabels = labels.filter { isFoodRelated(it.text) }
+                    .sortedByDescending { it.confidence }
+                    .take(TOP_K)
 
-    private fun loadLabels() {
-        labels.clear()
-        context.assets.open(LABELS_FILE).bufferedReader().forEachLine { line ->
-            val trimmed = line.trim()
-            if (trimmed.isNotEmpty()) labels.add(trimmed)
-        }
-    }
+                val source = foodLabels.ifEmpty {
+                    labels.sortedByDescending { it.confidence }.take(TOP_K)
+                }
 
-    fun classify(bitmap: Bitmap): List<FoodPrediction> {
-        val interp = interpreter ?: return emptyList()
-        if (labels.isEmpty()) return emptyList()
-
-        // Resize to model input size
-        val resized = if (bitmap.width == INPUT_SIZE && bitmap.height == INPUT_SIZE) {
-            bitmap
-        } else {
-            Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, true)
-        }
-
-        fillInputBuffer(resized)
-
-        // Output shape: [1, numLabels]
-        val numLabels = labels.size
-        val output = Array(1) { FloatArray(numLabels) }
-
-        interp.run(inputBuffer, output)
-
-        return output[0]
-            .mapIndexed { i, prob -> i to prob }
-            .sortedByDescending { it.second }
-            .take(TOP_K)
-            .filter { it.second >= CONFIDENCE_THRESHOLD }
-            .map { (i, prob) ->
-                val name = labels.getOrElse(i) { "Unknown" }
-                FoodPrediction(
-                    name = name,
-                    confidence = (prob * 100).toInt().coerceIn(1, 99),
-                    doshaTag = DoshaFoodMapper.doshaTag(name),
-                    caloriesPer100g = DoshaFoodMapper.calories(name)
-                )
+                callback(source.map { label ->
+                    val name = label.text.lowercase().trim()
+                    FoodPrediction(
+                        name             = name,
+                        confidence       = (label.confidence * 100).toInt().coerceIn(1, 99),
+                        doshaTag         = DoshaFoodMapper.doshaTag(name),
+                        caloriesPer100g  = DoshaFoodMapper.calories(name)
+                    )
+                })
+            }
+            .addOnFailureListener {
+                callback(emptyList())
             }
     }
 
-    // Normalize pixels to [0, 1] range (standard for MobileNet/EfficientNet TFLite exports)
-    private fun fillInputBuffer(bitmap: Bitmap) {
-        inputBuffer.rewind()
-        val pixels = IntArray(INPUT_SIZE * INPUT_SIZE)
-        bitmap.getPixels(pixels, 0, INPUT_SIZE, 0, 0, INPUT_SIZE, INPUT_SIZE)
-        for (px in pixels) {
-            inputBuffer.putFloat(((px shr 16) and 0xFF) / 255.0f)  // R
-            inputBuffer.putFloat(((px shr 8)  and 0xFF) / 255.0f)  // G
-            inputBuffer.putFloat(( px         and 0xFF) / 255.0f)  // B
-        }
+    private fun isFoodRelated(label: String): Boolean {
+        val l = label.lowercase()
+        return FOOD_TERMS.any { l.contains(it) }
     }
+
+    private val FOOD_TERMS = listOf(
+        "food", "dish", "meal", "cuisine", "recipe", "ingredient", "snack",
+        // grains & breads
+        "rice", "bread", "roti", "naan", "chapati", "paratha", "puri", "dosa",
+        "idli", "appam", "grain", "flour", "cereal",
+        // proteins
+        "chicken", "meat", "fish", "egg", "paneer", "tofu", "lentil", "dal",
+        "bean", "legume", "protein",
+        // vegetables & fruits
+        "vegetable", "veggie", "fruit", "salad", "greens", "leaf",
+        // Indian dishes
+        "curry", "biryani", "samosa", "pakora", "tikka", "korma", "masala",
+        "sabzi", "chutney", "raita", "khichdi", "upma", "poha",
+        // soups & liquids
+        "soup", "broth", "stew", "gravy", "sauce",
+        // dairy
+        "milk", "yogurt", "curd", "cream", "cheese",
+        // desserts
+        "dessert", "sweet", "halwa", "kheer", "payasam",
+        // generic
+        "baked", "fried", "roasted", "steamed", "cooked"
+    )
 
     fun isReady() = ready
 
     fun close() {
-        interpreter?.close()
-        interpreter = null
-        ready = false
+        labeler.close()
     }
 }

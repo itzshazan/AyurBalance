@@ -88,7 +88,39 @@ object DoshaFoodMapper {
         "payasam"                to FoodMeta("KAPHA MODERATE", 150),
         "bhel puri"              to FoodMeta("VATA LIGHT",     120),
         "pani puri"              to FoodMeta("PITTA MODERATE", 140),
-        "misal pav"              to FoodMeta("PITTA MODERATE", 200)
+        "misal pav"              to FoodMeta("PITTA MODERATE", 200),
+
+        // ── Generic labels returned by ML Kit Image Labeling ──────────────────
+        "bread"                  to FoodMeta("KAPHA MODERATE", 265),
+        "flatbread"              to FoodMeta("VATA PACIFYING", 220),
+        "chicken"                to FoodMeta("PITTA MODERATE", 165),
+        "fish"                   to FoodMeta("PITTA MODERATE", 130),
+        "egg"                    to FoodMeta("PITTA MODERATE", 155),
+        "meat"                   to FoodMeta("PITTA HEAVY",    250),
+        "curry"                  to FoodMeta("PITTA MODERATE", 180),
+        "lentil"                 to FoodMeta("VATA PACIFYING", 110),
+        "legume"                 to FoodMeta("VATA PACIFYING", 120),
+        "grain"                  to FoodMeta("VATA PACIFYING", 340),
+        "vegetable"              to FoodMeta("VATA PACIFYING",  70),
+        "salad"                  to FoodMeta("VATA LIGHT",      50),
+        "fruit"                  to FoodMeta("VATA PACIFYING",  60),
+        "soup"                   to FoodMeta("VATA PACIFYING",  80),
+        "stew"                   to FoodMeta("VATA PACIFYING",  90),
+        "milk"                   to FoodMeta("KAPHA MODERATE",  60),
+        "yogurt"                 to FoodMeta("PITTA LIGHT",     90),
+        "curd"                   to FoodMeta("PITTA LIGHT",     90),
+        "cream"                  to FoodMeta("KAPHA MODERATE", 340),
+        "cheese"                 to FoodMeta("KAPHA MODERATE", 400),
+        "dessert"                to FoodMeta("KAPHA HEAVY",    350),
+        "sweet"                  to FoodMeta("KAPHA HEAVY",    300),
+        "fried food"             to FoodMeta("KAPHA HEAVY",    350),
+        "baked"                  to FoodMeta("KAPHA MODERATE", 220),
+        "steamed"                to FoodMeta("VATA PACIFYING", 130),
+        "roasted"                to FoodMeta("PITTA MODERATE", 200),
+        "rice dish"              to FoodMeta("VATA PACIFYING", 150),
+        "noodle"                 to FoodMeta("KAPHA MODERATE", 200),
+        "dumpling"               to FoodMeta("KAPHA MODERATE", 150),
+        "snack"                  to FoodMeta("KAPHA MODERATE", 220)
     )
 
     private val default = FoodMeta("PITTA MODERATE", 200)

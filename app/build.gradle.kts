@@ -94,9 +94,12 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
     implementation("androidx.camera:camera-view:$cameraxVersion")
 
-    // TensorFlow Lite
+    // TensorFlow Lite (kept for future custom model support)
     implementation("org.tensorflow:tensorflow-lite:2.14.0")
     implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
+
+    // ML Kit — on-device food / image recognition (no model file needed)
+    implementation("com.google.mlkit:image-labeling:17.0.8")
 
     // RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")

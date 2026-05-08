@@ -24,16 +24,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.lifecycle.lifecycleScope
 import com.ayurbalance.R
 import com.ayurbalance.databinding.ActivityLogFoodBinding
 import com.ayurbalance.ui.analytics.AnalyticsActivity
 import com.ayurbalance.ui.meals.MealPlanActivity
 import com.ayurbalance.ui.profile.ProfileActivity
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -86,17 +82,8 @@ class LogFoodActivity : AppCompatActivity() {
         classifier = FoodClassifier(this)
 
         // Load model off the main thread
-        lifecycleScope.launch {
-            val ready = withContext(Dispatchers.IO) { classifier.initialize() }
-            viewModel.setModelReady(ready)
-            if (!ready) {
-                Snackbar.make(
-                    binding.root,
-                    "ML model not found — add food_model.tflite to assets/",
-                    Snackbar.LENGTH_LONG
-                ).show()
-            }
-        }
+        // ML Kit initialises instantly — always succeeds
+        viewModel.setModelReady(classifier.initialize())
 
         checkCameraPermission()
         setupTabs()
@@ -193,10 +180,8 @@ class LogFoodActivity : AppCompatActivity() {
         val bitmap = imageProxyToBitmap(imageProxy)
         imageProxy.close()  // close before running inference to free camera buffer
 
-        val predictions = classifier.classify(bitmap)
-
-        runOnUiThread {
-            viewModel.updatePredictions(predictions)
+        classifier.classify(bitmap) { predictions ->
+            runOnUiThread { viewModel.updatePredictions(predictions) }
         }
     }
 
