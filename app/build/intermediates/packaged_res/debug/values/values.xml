@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="admin_accent">#1D9E75</color>
+    <color name="admin_accent_light">#9FE1CB</color>
+    <color name="admin_metric_bg">#FFFFFF</color>
+    <color name="admin_nav_header">#1B4A0F</color>
     <color name="analysis_card_bg">#FBF5ED</color>
     <color name="badge_circle_bg">#E4D9CB</color>
     <color name="badge_green_light">#DDE8D0</color>
@@ -14,6 +18,19 @@
     <color name="input_field_bg">#EDE5DA</color>
     <color name="input_icon_tint">#9E9589</color>
     <color name="phone_frame_bg">#DDD2C5</color>
+    <color name="pill_amber_bg">#FAEEDA</color>
+    <color name="pill_amber_text">#854F0B</color>
+    <color name="pill_blue_bg">#E6F1FB</color>
+    <color name="pill_blue_text">#185FA5</color>
+    <color name="pill_gray_bg">#F1EFE8</color>
+    <color name="pill_gray_text">#5F5E5A</color>
+    <color name="pill_green_bg">#E1F5EE</color>
+    <color name="pill_green_text">#0F6E56</color>
+    <color name="pill_purple_bg">#EEEDFE</color>
+    <color name="pill_purple_text">#534AB7</color>
+    <color name="pill_red_bg">#FCEBEB</color>
+    <color name="pill_red_text">#A32D2D</color>
+    <color name="pitta_terracotta">#C4572A</color>
     <color name="primary_green">#2D5F1B</color>
     <color name="primary_green_dark">#1B4A0F</color>
     <color name="primary_green_light">#4A7A35</color>
@@ -31,6 +48,7 @@
     <color name="text_status_brown">#8B6B2F</color>
     <color name="text_subtext_grey">#9E9589</color>
     <color name="text_tagline_brown">#7D7164</color>
+    <color name="vata_purple">#8866CC</color>
     <color name="week_badge_bg">#E8F5E0</color>
     <color name="white">#FFFFFF</color>
     <dimen name="onboarding_brand_size">28sp</dimen>
@@ -84,7 +102,10 @@
     <string name="already_have_account">Already have an account?</string>
     <string name="app_name">AyurBalance</string>
     <string name="back_text">Back</string>
+    <string name="btn_allow_location">Allow Location</string>
+    <string name="btn_complete_assessment">Complete Assessment  →</string>
     <string name="btn_complete_setup">Complete Setup  \u2192</string>
+    <string name="btn_confirm_region">Confirm Region  →</string>
     <string name="btn_continue">Continue</string>
     <string name="btn_continue_lifestyle">Continue to Lifestyle  \u2192</string>
     <string name="btn_continue_nutrition">Continue to Nutrition  \u2192</string>
@@ -92,10 +113,12 @@
     <string name="btn_get_started">Get Started  \u2192</string>
     <string name="btn_login">Login to Journey  \u2192</string>
     <string name="btn_next">Next  \u2192</string>
+    <string name="btn_next_question">Next Question  →</string>
     <string name="btn_previous_step">\u2190  PREVIOUS STEP</string>
     <string name="btn_save_for_later">SAVE FOR LATER</string>
     <string name="btn_sign_up">Sign Up  \u2192</string>
     <string name="btn_skip">Skip</string>
+    <string name="btn_skip_location">Set region manually instead</string>
     <string name="btn_skip_now">Skip for now</string>
     <string name="btn_verify_code">Verify Code  \u2192</string>
     <string name="cd_app_logo">AyurBalance leaf logo</string>
@@ -210,12 +233,20 @@
     <string name="label_full_name">FULL NAME</string>
     <string name="label_gender">Biological Gender</string>
     <string name="label_height">Height</string>
+    <string name="label_live_profile_analysis">LIVE PROFILE ANALYSIS</string>
     <string name="label_next_prakriti">NEXT: PERSONAL PRAKRITI ASSESSMENT</string>
     <string name="label_password">PASSWORD</string>
     <string name="label_weight">Weight</string>
+    <string name="label_your_region">YOUR REGION</string>
     <string name="link_need_help">Need help defining your goal?</string>
+    <string name="location_body">AyurBalance uses your region to apply the correct seasonal dietary protocol (Ritucharya). Your exact coordinates are never stored — only your climate zone.</string>
+    <string name="location_footer_note">You can change this anytime from your profile settings.</string>
+    <string name="location_heading">Where are you\nlocated?</string>
+    <string name="location_privacy_note">Coordinates are not stored. Only your broad climate zone is saved locally on your device.</string>
     <string name="login_subtitle">Reconnect with your natural rhythm\nand ancient wisdom.</string>
     <string name="login_text">Login</string>
+    <string name="manual_region_body">This helps us apply the right seasonal food guidelines (Ritucharya) for your area.</string>
+    <string name="manual_region_heading">Select your region</string>
     <string name="microsoft_text">Microsoft</string>
     <string name="new_to_balance">New to the Ayurbalance?</string>
     <string name="onboarding1_description">Discover a diet perfectly tailored\nto your unique body constitution\n(Prakriti).</string>
@@ -233,6 +264,11 @@
     <string name="otp_footer">ALCHEMY IN EVERY DETAIL \u2022 AYURBALANCE</string>
     <string name="otp_heading">Verify your\nspirit.</string>
     <string name="otp_resend_success">New code sent to your email!</string>
+    <string name="prakriti_assessment_title">Prakriti Assessment</string>
+    <string name="prakriti_kapha">KAPHA</string>
+    <string name="prakriti_note_default">Insights update in real-time as you refine your profile.</string>
+    <string name="prakriti_pitta">PITTA</string>
+    <string name="prakriti_vata">VATA</string>
     <string name="privacy_description">We prioritize your privacy with medical-grade security, ensuring your health journey remains yours alone.</string>
     <string name="privacy_heading_1">Your Data is</string>
     <string name="privacy_heading_2">Sacred.</string>
@@ -278,6 +314,12 @@
     <string name="vitality_trends_label">VITALITY TRENDS</string>
     <string name="week_12_label">Week 12</string>
     <string name="welcome_text">Welcome </string>
+    <style name="BottomSheetDialogTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+    <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@color/surface_cream</item>
+    </style>
     <style name="OtpBoxStyle">
         <item name="android:background">@drawable/bg_otp_box</item>
         <item name="android:gravity">center</item>

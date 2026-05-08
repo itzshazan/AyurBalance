@@ -1,12 +1,29 @@
 # AyurBalance ProGuard Rules
-# Add project specific ProGuard rules here.
-
-# Keep Supabase models when integrated
-# -keep class com.ayurbalance.data.model.** { *; }
 
 # Keep Kotlin serialization
-# -keepattributes *Annotation*, InnerClasses
-# -dontnote kotlinx.serialization.AnnotationsKt
+-keepattributes *Annotation*, InnerClasses
+-dontnote kotlinx.serialization.AnnotationsKt
 
-# Keep TFLite model classes when integrated
-# -keep class org.tensorflow.** { *; }
+# TensorFlow Lite
+-keep class org.tensorflow.** { *; }
+-keep class org.tensorflow.lite.** { *; }
+-keep class org.tensorflow.lite.support.** { *; }
+-dontwarn org.tensorflow.**
+
+# CameraX
+-keep class androidx.camera.** { *; }
+-dontwarn androidx.camera.**
+
+# AyurBalance data models (Supabase serialization)
+-keep class com.ayurbalance.data.models.** { *; }
+-keep class com.ayurbalance.data.local.** { *; }
+-keep class com.ayurbalance.ui.dashboard.** { *; }
+-keep class com.ayurbalance.ui.prakriti.** { *; }
+-keep class com.ayurbalance.ui.logfood.** { *; }
+-keep class com.ayurbalance.ui.meals.** { *; }
+
+# Room
+-keep class * extends androidx.room.RoomDatabase { *; }
+-keep @androidx.room.Entity class * { *; }
+-keep @androidx.room.Dao interface * { *; }
+-dontwarn androidx.room.**

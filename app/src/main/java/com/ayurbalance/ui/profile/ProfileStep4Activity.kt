@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.ayurbalance.R
 import com.ayurbalance.databinding.ActivityProfileStep4Binding
+import com.ayurbalance.ui.location.LocationPermissionActivity
 
 /**
  * Health Profile — Step 4: Goals & Focus
@@ -151,36 +152,11 @@ class ProfileStep4Activity : AppCompatActivity() {
             updateGoalUI(goal)
         }
 
+        // Save result is fire-and-forget — navigation already happened on button tap.
+        // Log silent failures here without blocking the user.
         viewModel.submissionState.observe(this) { state ->
-            when (state) {
-                is ProfileViewModel.SubmissionState.Loading -> {
-                    binding.btnFinish.text = ""
-                    binding.progressSubmitting.visibility = View.VISIBLE
-                    binding.btnFinish.isEnabled = false
-                    setCardsEnabled(false)
-                }
-                is ProfileViewModel.SubmissionState.Success -> {
-                    // Navigate to next module (Prakriti Assessment)
-                    binding.progressSubmitting.visibility = View.GONE
-                    binding.btnFinish.text = getString(R.string.btn_finish_setup)
-                    Toast.makeText(this, "Profile Saved Successfully!", Toast.LENGTH_SHORT).show()
-                    
-                    // TODO: Intent to Prakriti Assessment
-                    finish() 
-                }
-                is ProfileViewModel.SubmissionState.Error -> {
-                    binding.progressSubmitting.visibility = View.GONE
-                    binding.btnFinish.text = getString(R.string.btn_finish_setup)
-                    binding.btnFinish.isEnabled = true
-                    setCardsEnabled(true)
-                    Toast.makeText(this, state.message, Toast.LENGTH_LONG).show()
-                }
-                else -> {
-                    binding.progressSubmitting.visibility = View.GONE
-                    binding.btnFinish.text = getString(R.string.btn_finish_setup)
-                    binding.btnFinish.isEnabled = true
-                    setCardsEnabled(true)
-                }
+            if (state is ProfileViewModel.SubmissionState.Error) {
+                android.util.Log.w("ProfileStep4", "Background save failed: ${state.message}")
             }
         }
     }
@@ -200,7 +176,14 @@ class ProfileStep4Activity : AppCompatActivity() {
 
         binding.btnFinish.setOnClickListener {
             if (viewModel.isStep4Valid.value == true) {
-                viewModel.submitProfile()
+                // Navigate immediately — don't wait for Supabase
+                viewModel.submitProfile() // runs in background coroutine
+                val intent = Intent(this, LocationPermissionActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                startActivity(intent)
+                @Suppress("DEPRECATION")
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                finish()
             } else {
                 Toast.makeText(this, "Please select your primary focus.", Toast.LENGTH_SHORT).show()
             }

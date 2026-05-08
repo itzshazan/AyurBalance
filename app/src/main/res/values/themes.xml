@@ -24,6 +24,15 @@
         <item name="android:windowBackground">@color/splash_bottom_bg</item>
     </style>
 
+    <!-- Bottom Sheet Dialog -->
+    <style name="BottomSheetDialogTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@color/surface_cream</item>
+    </style>
+
     <!-- OTP digit input box style -->
     <style name="OtpBoxStyle">
         <item name="android:background">@drawable/bg_otp_box</item>

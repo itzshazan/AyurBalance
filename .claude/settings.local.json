@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la /c/AyurBalance/ 2>/dev/null || ls -la /mnt/c/AyurBalance/ 2>/dev/null || ls c:/AyurBalance/ 2>/dev/null)",
+      "Read(//mnt/c/**)",
+      "Bash(ls \"/c/Program Files/Android/Android Studio/jbr/bin/\" 2>/dev/null | grep java && echo \"Found AS JDK\" || echo \"Not found\" *)",
+      "Read(//c/Program Files/Android/Android Studio/jbr/bin//**)",
+      "Read(//c/Program Files/Android/Android Studio//**)"
+    ]
+  }
+}

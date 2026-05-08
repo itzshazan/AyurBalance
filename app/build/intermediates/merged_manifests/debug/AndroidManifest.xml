@@ -10,6 +10,17 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- COARSE only — GPS precision not needed for climate zone detection -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Camera — used for food recognition in Log Food screen -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <!-- Notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <permission
         android:name="com.ayurbalance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -113,11 +124,128 @@
             android:theme="@style/Theme.AyurBalance.Auth"
             android:windowSoftInputMode="adjustResize" />
 
+        <!-- Location Permission (between Profile Setup and Prakriti) -->
+        <activity
+            android:name="com.ayurbalance.ui.location.LocationPermissionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Assessment -->
+        <activity
+            android:name="com.ayurbalance.ui.prakriti.PrakritiQuestionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Result -->
+        <activity
+            android:name="com.ayurbalance.ui.prakriti.PrakritiResultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
         <!-- Main Dashboard -->
         <activity
             android:name="com.ayurbalance.ui.dashboard.DashboardActivity"
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Log Food (Camera / ML identification) -->
+        <activity
+            android:name="com.ayurbalance.ui.logfood.LogFoodActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Food Logged Success (nutrition + Ayurvedic recap) -->
+        <activity
+            android:name="com.ayurbalance.ui.logfood.FoodLoggedSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Meal Plan (personalized Ayurvedic daily meal schedule) -->
+        <activity
+            android:name="com.ayurbalance.ui.meals.MealPlanActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Analytics (7-day wellness trends + dosha alignment) -->
+        <activity
+            android:name="com.ayurbalance.ui.analytics.AnalyticsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Profile Screen -->
+        <activity
+            android:name="com.ayurbalance.ui.profile.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Prakriti Detail (from Profile) -->
+        <activity
+            android:name="com.ayurbalance.ui.profile.PrakritiDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Privacy Settings (from Profile) -->
+        <activity
+            android:name="com.ayurbalance.ui.profile.PrivacySettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Notification broadcast receiver -->
+        <receiver
+            android:name="com.ayurbalance.ui.profile.NotificationBroadcastReceiver"
+            android:exported="false" />
+
+        <!-- Admin Panel -->
+        <activity
+            android:name="com.ayurbalance.admin.AdminLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.ayurbalance.admin.AdminDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <service
+            android:name="androidx.camera.core.impl.MetadataHolderService"
+            android:enabled="false"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+        </service>
+        <service
+            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.label.defaults.internal.BundledLabelRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.vkp.VkpRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+            android:authorities="com.ayurbalance.mlkitinitprovider"
+            android:exported="false"
+            android:initOrder="99" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
@@ -140,6 +268,11 @@
                 android:value="androidx.startup" />
         </provider>
 
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
             android:directBootAware="false"
@@ -159,6 +292,23 @@
                 <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false" >
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
+        </service>
+
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
     </application>
 
 </manifest>

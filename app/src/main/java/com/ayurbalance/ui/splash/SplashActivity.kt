@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.ayurbalance.admin.AdminLoginActivity
 import com.ayurbalance.databinding.ActivitySplashBinding
 import com.ayurbalance.ui.onboarding.OnboardingActivity
 
@@ -48,6 +49,7 @@ class SplashActivity : AppCompatActivity() {
 
         applyWindowInsets()
         startAnimationSequence()
+        setupAdminEntry()
 
         // Navigate after the animation completes
         handler.postDelayed({ checkAuthAndNavigate() }, 4000)
@@ -162,6 +164,22 @@ class SplashActivity : AppCompatActivity() {
                 .setDuration(500)
                 .setInterpolator(standard)
                 .start()
+        }
+    }
+
+    // ──────────────────────────────────────────────
+    //  Hidden Admin Entry — long-press app logo
+    // ──────────────────────────────────────────────
+
+    private fun setupAdminEntry() {
+        binding.badgeContainer.setOnLongClickListener {
+            handler.removeCallbacksAndMessages(null)
+            val intent = Intent(this, AdminLoginActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            startActivity(intent)
+            finish()
+            true
         }
     }
 

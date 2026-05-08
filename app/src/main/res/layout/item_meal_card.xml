@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_meal_plan_card"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="16dp">
+
+    <!-- Meal type icon container -->
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/bg_meal_icon_container">
+
+        <TextView
+            android:id="@+id/tvMealIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="☀"
+            android:textSize="20sp"
+            android:textColor="@color/primary_green" />
+
+    </FrameLayout>
+
+    <!-- Text content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMealTypeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BREAKFAST · 8:00 AM"
+            android:textColor="@color/text_caption"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:layout_marginBottom="3dp" />
+
+        <TextView
+            android:id="@+id/tvMealName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poha with coconut"
+            android:textColor="@color/text_heading_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="3dp" />
+
+        <TextView
+            android:id="@+id/tvMealMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="280 kcal · 15 min"
+            android:textColor="@color/text_caption"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- Swap button -->
+    <TextView
+        android:id="@+id/tvSwapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_swap_btn"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="7dp"
+        android:text="Swap"
+        android:textColor="@color/text_heading_dark"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

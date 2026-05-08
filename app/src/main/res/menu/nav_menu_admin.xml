@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navDashboard"
+        android:icon="@drawable/ic_nav_dashboard"
+        android:title="Dashboard"
+        android:checked="true" />
+
+    <item
+        android:id="@+id/navActivity"
+        android:icon="@drawable/ic_nav_activity"
+        android:title="Live activity" />
+
+    <item
+        android:id="@+id/navUsers"
+        android:icon="@drawable/ic_nav_users"
+        android:title="User management" />
+
+    <item
+        android:id="@+id/navCompliance"
+        android:icon="@drawable/ic_nav_compliance"
+        android:title="Compliance" />
+
+    <item
+        android:id="@+id/navFoodDb"
+        android:icon="@drawable/ic_nav_food"
+        android:title="Food database" />
+
+    <item
+        android:id="@+id/navRecipes"
+        android:icon="@drawable/ic_nav_recipes"
+        android:title="Recipes &amp; plans" />
+
+    <item
+        android:id="@+id/navMl"
+        android:icon="@drawable/ic_nav_ml"
+        android:title="ML model" />
+
+    <item
+        android:id="@+id/navSystem"
+        android:icon="@drawable/ic_nav_system"
+        android:title="System health" />
+
+</menu>

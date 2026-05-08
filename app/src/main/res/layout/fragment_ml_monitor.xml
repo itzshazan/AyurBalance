@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Metric cards row 1 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Avg confidence" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvAvgConfidence" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="—" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Top-1 accuracy" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvTop1Accuracy" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="—" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Metric cards row 2 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginEnd="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Fallback rate" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvFallbackRate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="—" android:textColor="@color/error_red" android:textSize="22sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="6dp" android:background="@drawable/bg_admin_metric_card"
+                android:orientation="vertical" android:padding="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Model size" android:textColor="@color/text_caption" android:textSize="11sp" />
+                <TextView android:id="@+id/tvModelSize" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="—" android:textColor="@color/text_heading_dark" android:textSize="22sp" android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Confidence distribution card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card" android:orientation="vertical"
+            android:padding="14dp" android:layout_marginBottom="10dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Confidence distribution" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+            <!-- High confidence bar -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                    android:text="High" android:textColor="@color/text_body" android:textSize="12sp" />
+                <FrameLayout android:id="@+id/trackHighConf"
+                    android:layout_width="0dp" android:layout_height="8dp" android:layout_weight="1"
+                    android:background="#F0EDE6" android:layout_marginEnd="8dp">
+                    <View android:id="@+id/fillHighConf"
+                        android:layout_width="0dp" android:layout_height="match_parent"
+                        android:background="#1D9E75" />
+                </FrameLayout>
+                <TextView android:layout_width="36dp" android:layout_height="wrap_content"
+                    android:text="62%" android:textColor="@color/text_heading_dark"
+                    android:textSize="12sp" android:textStyle="bold" android:gravity="end" />
+            </LinearLayout>
+
+            <!-- Mid confidence bar -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                    android:text="Mid" android:textColor="@color/text_body" android:textSize="12sp" />
+                <FrameLayout android:id="@+id/trackMidConf"
+                    android:layout_width="0dp" android:layout_height="8dp" android:layout_weight="1"
+                    android:background="#F0EDE6" android:layout_marginEnd="8dp">
+                    <View android:id="@+id/fillMidConf"
+                        android:layout_width="0dp" android:layout_height="match_parent"
+                        android:background="#E4A214" />
+                </FrameLayout>
+                <TextView android:layout_width="36dp" android:layout_height="wrap_content"
+                    android:text="20%" android:textColor="@color/text_heading_dark"
+                    android:textSize="12sp" android:textStyle="bold" android:gravity="end" />
+            </LinearLayout>
+
+            <!-- Low confidence bar -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                    android:text="Low" android:textColor="@color/text_body" android:textSize="12sp" />
+                <FrameLayout android:id="@+id/trackLowConf"
+                    android:layout_width="0dp" android:layout_height="8dp" android:layout_weight="1"
+                    android:background="#F0EDE6" android:layout_marginEnd="8dp">
+                    <View android:id="@+id/fillLowConf"
+                        android:layout_width="0dp" android:layout_height="match_parent"
+                        android:background="@color/error_red" />
+                </FrameLayout>
+                <TextView android:layout_width="36dp" android:layout_height="wrap_content"
+                    android:text="18%" android:textColor="@color/text_heading_dark"
+                    android:textSize="12sp" android:textStyle="bold" android:gravity="end" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Model versions card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card" android:orientation="vertical"
+            android:padding="14dp" android:layout_marginBottom="10dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Model versions" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+            <!-- v2.4 active -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="prakriti_clf_v2.4.tflite" android:textColor="@color/text_heading_dark"
+                        android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Deployed 12 Nov 2024 · 11.2 MB"
+                        android:textColor="@color/text_caption" android:textSize="11sp" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@color/pill_green_bg" android:paddingHorizontal="10dp" android:paddingVertical="4dp"
+                    android:text="Active" android:textColor="@color/pill_green_text"
+                    android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#F0EDE6" />
+
+            <!-- v2.3 retired -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="prakriti_clf_v2.3.tflite" android:textColor="@color/text_body"
+                        android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Retired 11 Nov 2024 · 10.8 MB"
+                        android:textColor="@color/text_caption" android:textSize="11sp" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@color/pill_gray_bg" android:paddingHorizontal="10dp" android:paddingVertical="4dp"
+                    android:text="Retired" android:textColor="@color/pill_gray_text"
+                    android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#F0EDE6" />
+
+            <!-- v2.5 staged -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="prakriti_clf_v2.5.tflite" android:textColor="@color/text_heading_dark"
+                        android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Staged · 12.0 MB · 5% traffic"
+                        android:textColor="@color/text_caption" android:textSize="11sp" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@color/pill_amber_bg" android:paddingHorizontal="10dp" android:paddingVertical="4dp"
+                    android:text="Staged" android:textColor="@color/pill_amber_text"
+                    android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Worst-performing dishes card -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_admin_card" android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Worst-performing dish predictions" android:textColor="@color/text_heading_dark"
+                android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="8dp" />
+
+            <!-- Header row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="6dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"
+                    android:text="Dish" android:textColor="@color/text_caption" android:textSize="11sp" android:textStyle="bold" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Confidence" android:textColor="@color/text_caption" android:textSize="11sp"
+                    android:textStyle="bold" android:gravity="end" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Fallbacks" android:textColor="@color/text_caption" android:textSize="11sp"
+                    android:textStyle="bold" android:gravity="end" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0EDE6" />
+
+            <!-- Row 1 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"
+                    android:text="Modak" android:textColor="@color/text_heading_dark" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="48%" android:textColor="@color/error_red" android:textSize="12sp"
+                    android:textStyle="bold" android:gravity="end" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="142" android:textColor="@color/text_heading_dark" android:textSize="12sp"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0EDE6" />
+
+            <!-- Row 2 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"
+                    android:text="Kozhukattai" android:textColor="@color/text_heading_dark" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="51%" android:textColor="@color/error_red" android:textSize="12sp"
+                    android:textStyle="bold" android:gravity="end" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="98" android:textColor="@color/text_heading_dark" android:textSize="12sp"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0EDE6" />
+
+            <!-- Row 3 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"
+                    android:text="Puran Poli" android:textColor="@color/text_heading_dark" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="54%" android:textColor="@color/pill_amber_text" android:textSize="12sp"
+                    android:textStyle="bold" android:gravity="end" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="76" android:textColor="@color/text_heading_dark" android:textSize="12sp"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0EDE6" />
+
+            <!-- Row 4 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"
+                    android:text="Chakli" android:textColor="@color/text_heading_dark" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="57%" android:textColor="@color/pill_amber_text" android:textSize="12sp"
+                    android:textStyle="bold" android:gravity="end" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="61" android:textColor="@color/text_heading_dark" android:textSize="12sp"
+                    android:gravity="end" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#F0EDE6" />
+
+            <!-- Row 5 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingVertical="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"
+                    android:text="Karanji" android:textColor="@color/text_heading_dark" android:textSize="12sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="59%" android:textColor="@color/pill_amber_text" android:textSize="12sp"
+                    android:textStyle="bold" android:gravity="end" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="54" android:textColor="@color/text_heading_dark" android:textSize="12sp"
+                    android:gravity="end" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

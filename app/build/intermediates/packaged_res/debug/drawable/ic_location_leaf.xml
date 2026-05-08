@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Outer soft circle background -->
+    <path
+        android:fillColor="#DDE8D0"
+        android:pathData="M60,8 C31.4,8 8,31.4 8,60 C8,88.6 31.4,112 60,112 C88.6,112 112,88.6 112,60 C112,31.4 88.6,8 60,8 Z" />
+
+    <!-- Location pin body -->
+    <path
+        android:fillColor="#2D5F1B"
+        android:pathData="M60,22 C47.8,22 38,31.8 38,44 C38,60 60,82 60,82 C60,82 82,60 82,44 C82,31.8 72.2,22 60,22 Z" />
+
+    <!-- Location pin inner circle (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,36 C55.6,36 52,39.6 52,44 C52,48.4 55.6,52 60,52 C64.4,52 68,48.4 68,44 C68,39.6 64.4,36 60,36 Z" />
+
+    <!-- Leaf accent (right side of pin) -->
+    <path
+        android:fillColor="#4A7A35"
+        android:pathData="M68,32 C72,27 80,26 82,30 C80,36 74,38 68,32 Z" />
+
+    <!-- Ground dot shadow (subtle) -->
+    <path
+        android:fillColor="#C5DBA8"
+        android:pathData="M52,88 C52,85.8 55.6,84 60,84 C64.4,84 68,85.8 68,88 C68,90.2 64.4,92 60,92 C55.6,92 52,90.2 52,88 Z" />
+
+</vector>

@@ -3,6 +3,14 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- COARSE only — GPS precision not needed for climate zone detection -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Camera — used for food recognition in Log Food screen -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- Notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:name=".AyurBalanceApp"
@@ -102,9 +110,86 @@
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.AyurBalance.Auth" />
 
+        <!-- Location Permission (between Profile Setup and Prakriti) -->
+        <activity
+            android:name=".ui.location.LocationPermissionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Assessment -->
+        <activity
+            android:name=".ui.prakriti.PrakritiQuestionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Prakriti Result -->
+        <activity
+            android:name=".ui.prakriti.PrakritiResultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
         <!-- Main Dashboard -->
         <activity
             android:name=".ui.dashboard.DashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Log Food (Camera / ML identification) -->
+        <activity
+            android:name=".ui.logfood.LogFoodActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Food Logged Success (nutrition + Ayurvedic recap) -->
+        <activity
+            android:name=".ui.logfood.FoodLoggedSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Meal Plan (personalized Ayurvedic daily meal schedule) -->
+        <activity
+            android:name=".ui.meals.MealPlanActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Analytics (7-day wellness trends + dosha alignment) -->
+        <activity
+            android:name=".ui.analytics.AnalyticsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Profile Screen -->
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Prakriti Detail (from Profile) -->
+        <activity
+            android:name=".ui.profile.PrakritiDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance" />
+
+        <!-- Privacy Settings (from Profile) -->
+        <activity
+            android:name=".ui.profile.PrivacySettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <!-- Notification broadcast receiver -->
+        <receiver
+            android:name=".ui.profile.NotificationBroadcastReceiver"
+            android:exported="false" />
+
+        <!-- Admin Panel -->
+        <activity
+            android:name=".admin.AdminLoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.AyurBalance.Auth" />
+
+        <activity
+            android:name=".admin.AdminDashboardActivity"
             android:exported="false"
             android:theme="@style/Theme.AyurBalance" />
 
