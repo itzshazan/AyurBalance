@@ -5,7 +5,11 @@
       "Read(//mnt/c/**)",
       "Bash(ls \"/c/Program Files/Android/Android Studio/jbr/bin/\" 2>/dev/null | grep java && echo \"Found AS JDK\" || echo \"Not found\" *)",
       "Read(//c/Program Files/Android/Android Studio/jbr/bin//**)",
-      "Read(//c/Program Files/Android/Android Studio//**)"
+      "Read(//c/Program Files/Android/Android Studio//**)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\AyurBalance\\\\AyurBalance\\\\app\\\\src\\\\main\\\\java\\\\com\\\\ayurbalance\" -Recurse | Where-Object {$_.PSIsContainer} | Select-Object -ExpandProperty FullName | Sort-Object)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\AyurBalance\\\\AyurBalance\\\\app\" -File | Where-Object {$_.Name -match \"build\"})",
+      "PowerShell($env:JAVA_HOME = \"C:\\\\Program Files\\\\Android\\\\Android Studio\\\\jbr\"; $env:PATH = \"$env:JAVA_HOME\\\\bin;$env:PATH\"; cd \"c:\\\\AyurBalance\\\\AyurBalance\"; & \"C:\\\\Users\\\\HP\\\\.gradle\\\\wrapper\\\\dists\\\\gradle-8.9-bin\\\\90cnw93cvbtalezasaz0blq0a\\\\gradle-8.9\\\\bin\\\\gradle.bat\" assembleDebug --no-daemon 2>&1 | Select-Object -Last 40)",
+      "PowerShell(& \"$env:LOCALAPPDATA\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe\" devices)"
     ]
   }
 }

@@ -176,10 +176,30 @@
             android:exported="false"
             android:theme="@style/Theme.AyurBalance.Auth" />
 
+        <!-- Reminder screen (accessed from Dashboard bell icon and notification deep links) -->
+        <activity
+            android:name=".ui.reminders.ReminderActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AyurBalance">
+            <intent-filter>
+                <action android:name="com.ayurbalance.action.OPEN_REMINDERS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!-- Notification broadcast receiver -->
         <receiver
             android:name=".ui.profile.NotificationBroadcastReceiver"
             android:exported="false" />
+
+        <!-- Reminder boot receiver — reschedules WorkManager on device restart -->
+        <receiver
+            android:name=".ui.reminders.ReminderBootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
         <!-- Admin Panel -->
         <activity

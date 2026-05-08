@@ -1337,7 +1337,11 @@ attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool enable_system_alarm_service_default
+bool enable_system_foreground_service_default
+bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -3243,6 +3247,7 @@ drawable graph_vitality_line
 drawable ic_arrow_back_black_24
 drawable ic_arrow_right
 drawable ic_back_arrow
+drawable ic_bell
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3317,6 +3322,7 @@ drawable ic_tree_small
 drawable ic_veg_pot
 drawable ic_vegan_leaf
 drawable ic_very_active
+drawable ic_water_drop
 drawable ic_wellness_flower
 drawable ic_yoga
 drawable icon_background
@@ -3558,6 +3564,7 @@ id btnGetStarted
 id btnGoogle
 id btnKg
 id btnLb
+id btnLogWater
 id btnLogin
 id btnMale
 id btnMenuToggle
@@ -3578,10 +3585,13 @@ id btnSignUp
 id btnSkip
 id btnSkipLocation
 id btnSkipNow
+id btnSnooze
+id btnStartCheckin
 id btnUserAction
 id btnUserView
 id btnVerify
 id btnViewJournal
+id btnViewMeal
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3864,6 +3874,10 @@ id inward
 id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
+id ivBack
+id ivBellIcon
+id ivDinacharyaDone
+id ivDinacharyaIcon
 id ivGraph
 id ivLogo
 id ivProfile
@@ -4064,6 +4078,8 @@ id ratio
 id recommendationsCard
 id rectangles
 id regionDropdown
+id reminderHeader
+id reminderRoot
 id report_drawn
 id resultRoot
 id resultsContent
@@ -4092,6 +4108,7 @@ id rvFoodItems
 id rvMacros
 id rvMealCards
 id rvRecipes
+id rvReminders
 id rvServices
 id rvSwapOptions
 id rvUsers
@@ -4291,6 +4308,9 @@ id tvDescription
 id tvDietType
 id tvDigestionValue
 id tvDimensionLabel
+id tvDinacharyaBody
+id tvDinacharyaTime
+id tvDinacharyaTitle
 id tvDisplayName
 id tvDominantDosha
 id tvDoshaAlignment
@@ -4325,9 +4345,13 @@ id tvHeading2
 id tvHeadingLine1
 id tvHeadingLine2
 id tvHydration
+id tvHydrationFraction
+id tvHydrationTarget
 id tvIdentifiedLabel
 id tvIdentifiedName
 id tvInsight
+id tvInsightRitu
+id tvInsightText
 id tvKaphaLabel
 id tvKaphaOption
 id tvKaphaPct
@@ -4346,8 +4370,10 @@ id tvMealIcon
 id tvMealInfo
 id tvMealMeta
 id tvMealName
+id tvMealTime
 id tvMealTimeLabel
 id tvMealType
+id tvMealTypeLabel
 id tvMealTypeTime
 id tvMeals
 id tvMentalInsight
@@ -4384,6 +4410,7 @@ id tvRecipeStatus
 id tvRecommendations
 id tvRecsInsight
 id tvRegionName
+id tvReminderSubtitle
 id tvResend
 id tvRisksInsight
 id tvScanStatus
@@ -4398,6 +4425,8 @@ id tvStepIndicator
 id tvStepPill
 id tvStepTitle
 id tvStreak
+id tvStreakDays
+id tvStreakMessage
 id tvSubtext
 id tvSubtitle
 id tvSuccessFoodName
@@ -4429,6 +4458,7 @@ id tvVataOption
 id tvVataPct
 id tvVataPercent
 id tvVataTraits
+id tvVikritiStatus
 id tvVisionTag
 id tvVitalityBowl
 id tvVitalityLabel
@@ -4599,6 +4629,7 @@ layout activity_profile_step1
 layout activity_profile_step2
 layout activity_profile_step3
 layout activity_profile_step4
+layout activity_reminder
 layout activity_signup
 layout activity_splash
 layout bottom_sheet_swap_meal
@@ -4638,6 +4669,12 @@ layout item_macro_row
 layout item_meal_card
 layout item_recipe_row
 layout item_region_dropdown
+layout item_reminder_dinacharya
+layout item_reminder_hydration
+layout item_reminder_insight
+layout item_reminder_meal
+layout item_reminder_streak
+layout item_reminder_vikriti
 layout item_service_row
 layout item_swap_meal
 layout item_user_row
@@ -5953,6 +5990,8 @@ style Widget_AppCompat_TextView
 style Widget_AppCompat_TextView_SpinnerItem
 style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
+style Widget_AyurBalance_BottomNavIndicator
+style Widget_AyurBalance_BottomNavigationView
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Design_AppBarLayout

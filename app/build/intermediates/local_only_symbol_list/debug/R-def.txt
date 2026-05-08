@@ -200,6 +200,7 @@ drawable graph_vitality_animated
 drawable graph_vitality_line
 drawable ic_arrow_right
 drawable ic_back_arrow
+drawable ic_bell
 drawable ic_camera
 drawable ic_check_circle
 drawable ic_check_circle_green
@@ -257,6 +258,7 @@ drawable ic_tree_small
 drawable ic_veg_pot
 drawable ic_vegan_leaf
 drawable ic_very_active
+drawable ic_water_drop
 drawable ic_wellness_flower
 drawable ic_yoga
 drawable img_herbs_bowl
@@ -317,6 +319,7 @@ id btnGetStarted
 id btnGoogle
 id btnKg
 id btnLb
+id btnLogWater
 id btnLogin
 id btnMale
 id btnMenuToggle
@@ -337,10 +340,13 @@ id btnSignUp
 id btnSkip
 id btnSkipLocation
 id btnSkipNow
+id btnSnooze
+id btnStartCheckin
 id btnUserAction
 id btnUserView
 id btnVerify
 id btnViewJournal
+id btnViewMeal
 id cameraPreview
 id cardAvgKcal
 id cardCalories
@@ -485,6 +491,10 @@ id imgBotanicalBottom
 id imgPlantOverlay
 id infoCard
 id insightCard
+id ivBack
+id ivBellIcon
+id ivDinacharyaDone
+id ivDinacharyaIcon
 id ivGraph
 id ivLogo
 id ivProfile
@@ -552,6 +562,8 @@ id radioWeightLoss
 id radioWellness
 id recommendationsCard
 id regionDropdown
+id reminderHeader
+id reminderRoot
 id resultRoot
 id resultsContent
 id row0
@@ -572,6 +584,7 @@ id rvFoodItems
 id rvMacros
 id rvMealCards
 id rvRecipes
+id rvReminders
 id rvServices
 id rvSwapOptions
 id rvUsers
@@ -663,6 +676,9 @@ id tvDescription
 id tvDietType
 id tvDigestionValue
 id tvDimensionLabel
+id tvDinacharyaBody
+id tvDinacharyaTime
+id tvDinacharyaTitle
 id tvDisplayName
 id tvDominantDosha
 id tvDoshaAlignment
@@ -697,9 +713,13 @@ id tvHeading2
 id tvHeadingLine1
 id tvHeadingLine2
 id tvHydration
+id tvHydrationFraction
+id tvHydrationTarget
 id tvIdentifiedLabel
 id tvIdentifiedName
 id tvInsight
+id tvInsightRitu
+id tvInsightText
 id tvKaphaLabel
 id tvKaphaOption
 id tvKaphaPct
@@ -718,8 +738,10 @@ id tvMealIcon
 id tvMealInfo
 id tvMealMeta
 id tvMealName
+id tvMealTime
 id tvMealTimeLabel
 id tvMealType
+id tvMealTypeLabel
 id tvMealTypeTime
 id tvMeals
 id tvMentalInsight
@@ -756,6 +778,7 @@ id tvRecipeStatus
 id tvRecommendations
 id tvRecsInsight
 id tvRegionName
+id tvReminderSubtitle
 id tvResend
 id tvRisksInsight
 id tvScanStatus
@@ -770,6 +793,8 @@ id tvStepIndicator
 id tvStepPill
 id tvStepTitle
 id tvStreak
+id tvStreakDays
+id tvStreakMessage
 id tvSubtext
 id tvSubtitle
 id tvSuccessFoodName
@@ -801,6 +826,7 @@ id tvVataOption
 id tvVataPct
 id tvVataPercent
 id tvVataTraits
+id tvVikritiStatus
 id tvVisionTag
 id tvVitalityBowl
 id tvVitalityLabel
@@ -831,6 +857,7 @@ layout activity_profile_step1
 layout activity_profile_step2
 layout activity_profile_step3
 layout activity_profile_step4
+layout activity_reminder
 layout activity_signup
 layout activity_splash
 layout bottom_sheet_swap_meal
@@ -850,6 +877,12 @@ layout item_macro_row
 layout item_meal_card
 layout item_recipe_row
 layout item_region_dropdown
+layout item_reminder_dinacharya
+layout item_reminder_hydration
+layout item_reminder_insight
+layout item_reminder_meal
+layout item_reminder_streak
+layout item_reminder_vikriti
 layout item_service_row
 layout item_swap_meal
 layout item_user_row
@@ -1092,3 +1125,5 @@ style Theme.AyurBalance
 style Theme.AyurBalance.Auth
 style Theme.AyurBalance.Onboarding
 style Theme.AyurBalance.Splash
+style Widget.AyurBalance.BottomNavIndicator
+style Widget.AyurBalance.BottomNavigationView

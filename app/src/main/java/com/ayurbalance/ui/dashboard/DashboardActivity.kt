@@ -18,6 +18,7 @@ import com.ayurbalance.ui.analytics.AnalyticsActivity
 import com.ayurbalance.ui.logfood.LogFoodActivity
 import com.ayurbalance.ui.meals.MealPlanActivity
 import com.ayurbalance.ui.profile.ProfileActivity
+import com.ayurbalance.ui.reminders.ReminderActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.request.RequestOptions
@@ -56,6 +57,10 @@ class DashboardActivity : AppCompatActivity() {
         binding.progressPrana.isDashed = true
         binding.progressPrana.trackColor = Color.parseColor("#D8CFC4")
 
+        binding.ivBellIcon.setOnClickListener {
+            startActivity(Intent(this, ReminderActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+        }
         binding.fabCamera.setOnClickListener {
             startActivity(Intent(this, LogFoodActivity::class.java))
         }

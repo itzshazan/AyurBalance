@@ -7,6 +7,17 @@
         <item name="colorPrimaryDark">@color/primary_green_dark</item>
         <item name="colorAccent">@color/primary_green_light</item>
         <item name="android:windowBackground">@color/surface_cream</item>
+        <item name="bottomNavigationStyle">@style/Widget.AyurBalance.BottomNavigationView</item>
+    </style>
+
+    <!-- BottomNavigationView: hide the pill-shaped active indicator -->
+    <style name="Widget.AyurBalance.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@style/Widget.AyurBalance.BottomNavIndicator</item>
+    </style>
+
+    <style name="Widget.AyurBalance.BottomNavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
     </style>
 
     <!-- Splash Screen Theme — matching beige background for seamless launch -->

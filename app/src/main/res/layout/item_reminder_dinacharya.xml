@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_sleep_card"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="12dp"
+    android:padding="18dp"
+    android:gravity="center_vertical"
+    android:elevation="2dp">
+
+    <!-- Icon -->
+    <ImageView
+        android:id="@+id/ivDinacharyaIcon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_sleep_moon"
+        android:background="@drawable/bg_section_icon_circle"
+        android:padding="10dp"
+        android:layout_marginEnd="14dp" />
+
+    <!-- Text block -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DINACHARYA"
+                android:textColor="@color/text_caption"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.10" />
+
+            <TextView
+                android:id="@+id/tvDinacharyaTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:30 PM"
+                android:textColor="@color/text_caption"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDinacharyaTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind-down routine"
+            android:textColor="@color/text_heading_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvDinacharyaBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lights dim · Avoid screens"
+            android:textColor="@color/text_body"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+
+    <!-- Done toggle -->
+    <ImageView
+        android:id="@+id/ivDinacharyaDone"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_check_circle"
+        android:alpha="0.35"
+        android:layout_marginStart="12dp"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>

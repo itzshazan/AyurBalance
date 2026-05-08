@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_nutrition_card"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="12dp"
+    android:padding="18dp"
+    android:elevation="2dp">
+
+    <!-- Header row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HYDRATION"
+            android:textColor="@color/text_caption"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.10" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_water_drop"
+            android:scaleType="fitCenter" />
+
+    </LinearLayout>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time to hydrate"
+        android:textColor="@color/text_heading_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Dosha target -->
+    <TextView
+        android:id="@+id/tvHydrationTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pitta target: 3.2L · 1.8L logged"
+        android:textColor="@color/text_body"
+        android:textSize="13sp"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Progress bar -->
+    <ProgressBar
+        android:id="@+id/progressHydration"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="56"
+        android:progressDrawable="@drawable/bg_progress_fill"
+        android:background="@drawable/bg_progress_track"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Fraction text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="14dp">
+
+        <TextView
+            android:id="@+id/tvHydrationFraction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1.8 / 3.2L today"
+            android:textColor="@color/text_body"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnLogWater"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_btn_primary"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:text="+ 250ml"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

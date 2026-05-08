@@ -72,23 +72,40 @@ class FoodClassifier(private val context: Context) {
         "food", "dish", "meal", "cuisine", "recipe", "ingredient", "snack",
         // grains & breads
         "rice", "bread", "roti", "naan", "chapati", "paratha", "puri", "dosa",
-        "idli", "appam", "grain", "flour", "cereal",
+        "idli", "appam", "grain", "flour", "cereal", "pasta", "noodle",
         // proteins
         "chicken", "meat", "fish", "egg", "paneer", "tofu", "lentil", "dal",
-        "bean", "legume", "protein",
-        // vegetables & fruits
-        "vegetable", "veggie", "fruit", "salad", "greens", "leaf",
+        "bean", "legume", "protein", "mutton", "lamb", "prawn", "shrimp",
+        "pork", "beef", "turkey", "seafood",
+        // individual fruits
+        "apple", "banana", "mango", "orange", "grape", "strawberry",
+        "watermelon", "lemon", "lime", "pineapple", "papaya", "guava",
+        "pomegranate", "kiwi", "peach", "plum", "cherry", "coconut",
+        "melon", "berr", "avocado", "fig", "date", "litchi", "jackfruit",
+        // individual vegetables
+        "potato", "tomato", "onion", "carrot", "spinach", "cauliflower",
+        "broccoli", "cucumber", "eggplant", "aubergine", "pea", "corn",
+        "pepper", "capsicum", "mushroom", "ginger", "garlic", "cabbage",
+        "pumpkin", "okra", "ladyfinger", "radish", "beetroot", "zucchini",
+        "asparagus", "celery", "leek", "turnip", "yam", "sweet potato",
+        "bottle gourd", "bitter gourd", "drumstick", "lotus",
+        // vegetables & fruits (generic)
+        "vegetable", "veggie", "fruit", "salad", "greens", "leaf", "produce",
         // Indian dishes
         "curry", "biryani", "samosa", "pakora", "tikka", "korma", "masala",
-        "sabzi", "chutney", "raita", "khichdi", "upma", "poha",
+        "sabzi", "chutney", "raita", "khichdi", "upma", "poha", "rajma",
+        "chole", "bhatura", "kofta", "kebab", "dhokla", "thepla", "uttapam",
+        "pesarattu", "payasam", "halwa", "kheer", "ladoo", "burfi", "jalebi",
+        "bhel", "pani puri", "vada", "medu", "pongal", "rasam", "sambar",
         // soups & liquids
-        "soup", "broth", "stew", "gravy", "sauce",
+        "soup", "broth", "stew", "gravy", "sauce", "stock",
         // dairy
-        "milk", "yogurt", "curd", "cream", "cheese",
-        // desserts
-        "dessert", "sweet", "halwa", "kheer", "payasam",
-        // generic
-        "baked", "fried", "roasted", "steamed", "cooked"
+        "milk", "yogurt", "curd", "cream", "cheese", "butter", "ghee",
+        // desserts & sweets
+        "dessert", "sweet", "cake", "pastry", "chocolate", "ice cream",
+        // cooking methods (help catch labelled dishes)
+        "baked", "fried", "roasted", "steamed", "cooked", "grilled",
+        "boiled", "sauteed", "stir", "tandoor"
     )
 
     fun isReady() = ready

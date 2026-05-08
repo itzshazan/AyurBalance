@@ -98,7 +98,23 @@
 
                 </LinearLayout>
 
-                <!-- Right: profile circle (avatar photo or initial letter) -->
+                <!-- Right: bell icon + profile circle -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/ivBellIcon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_bell"
+                    android:scaleType="center"
+                    android:layout_marginEnd="10dp"
+                    android:padding="4dp" />
+
+                <!-- Profile circle (avatar photo or initial letter) -->
                 <FrameLayout
                     android:layout_width="46dp"
                     android:layout_height="46dp"
@@ -122,6 +138,8 @@
                         android:textStyle="bold" />
 
                 </FrameLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 

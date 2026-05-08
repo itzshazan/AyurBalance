@@ -6,13 +6,15 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = [CachedMealPlanEntity::class],
-    version = 1,
+    entities = [CachedMealPlanEntity::class, FoodLogEntity::class, ReminderEntity::class],
+    version = 3,
     exportSchema = false
 )
 abstract class AyurBalanceDatabase : RoomDatabase() {
 
     abstract fun mealPlanDao(): MealPlanDao
+    abstract fun foodLogDao(): FoodLogDao
+    abstract fun reminderDao(): ReminderDao
 
     companion object {
         @Volatile private var INSTANCE: AyurBalanceDatabase? = null

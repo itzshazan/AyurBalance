@@ -2,6 +2,8 @@ package com.ayurbalance.ui.analytics
 
 import android.content.Context
 import com.ayurbalance.AyurBalanceApp
+import com.ayurbalance.data.local.AyurBalanceDatabase
+import com.ayurbalance.data.local.FoodLogEntity
 import com.ayurbalance.ui.meals.AyurvedicMealEngine
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.postgrest.from
@@ -9,34 +11,24 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import java.time.Instant
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import java.time.ZoneId
 
 class AnalyticsRepository(private val context: Context) {
 
-    private val fmt = DateTimeFormatter.ISO_LOCAL_DATE
-
     suspend fun loadAnalytics(): AnalyticsState = withContext(Dispatchers.IO) {
-        val supabase = AyurBalanceApp.supabaseClient
-        val userId = supabase.auth.currentUserOrNull()?.id
-            ?: return@withContext AnalyticsState(isLoading = false, isEmpty = true)
+        val db = AyurBalanceDatabase.getInstance(context)
 
-        val prakriti    = fetchPrakriti(userId)
-        val primaryDosha = extractPrimaryDosha(prakriti)
-        val ritu        = AyurvedicMealEngine.currentRitu()
+        val primaryDosha = fetchPrimaryDosha()
+        val ritu         = AyurvedicMealEngine.currentRitu()
 
-        val today = LocalDate.now()
-        val day0  = today.minusDays(13)   // 14 days of data (7 + prev 7 for delta)
+        val today    = LocalDate.now()
+        val day0     = today.minusDays(13)
+        val day0Ms   = day0.atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli()
 
-        val allLogs: List<JsonObject> = runCatching {
-            supabase.from("food_logs")
-                .select {
-                    filter {
-                        eq("user_id", userId)
-                        gte("created_at", day0.format(fmt))
-                    }
-                }
-                .decodeList<JsonObject>()
+        val allLogs = runCatching {
+            db.foodLogDao().getSince(day0Ms)
         }.getOrDefault(emptyList())
 
         if (allLogs.isEmpty()) {
@@ -76,9 +68,9 @@ class AnalyticsRepository(private val context: Context) {
         val alignDelta = (alignThis - alignPrev).toFloat()
 
         // ── Macros ───────────────────────────────────────────────────────────
-        val totalCarbs   = thisWeekLogs.sumOf { it.floatOf("carbs_g").toDouble() }
-        val totalProtein = thisWeekLogs.sumOf { it.floatOf("protein_g").toDouble() }
-        val totalFat     = thisWeekLogs.sumOf { it.floatOf("fat_g").toDouble() }
+        val totalCarbs   = thisWeekLogs.sumOf { it.carbsG.toDouble() }
+        val totalProtein = thisWeekLogs.sumOf { it.proteinG.toDouble() }
+        val totalFat     = thisWeekLogs.sumOf { it.fatG.toDouble() }
         val carbsCal     = totalCarbs   * 4
         val proteinCal   = totalProtein * 4
         val fatCal       = totalFat     * 9
@@ -105,13 +97,16 @@ class AnalyticsRepository(private val context: Context) {
 
     // ─── Private helpers ──────────────────────────────────────────────────────
 
-    private suspend fun fetchPrakriti(userId: String): String = runCatching {
-        val rows = AyurBalanceApp.supabaseClient
+    private suspend fun fetchPrimaryDosha(): String = runCatching {
+        val supabase = AyurBalanceApp.supabaseClient
+        val userId   = supabase.auth.currentUserOrNull()?.id ?: return@runCatching "VATA"
+        val rows     = supabase
             .from("user_profiles")
             .select { filter { eq("user_id", userId) } }
             .decodeList<JsonObject>()
-        rows.firstOrNull()?.get("prakriti_type")
+        val prakriti = rows.firstOrNull()?.get("prakriti_type")
             ?.let { it.toString().trim('"') } ?: "VATA"
+        extractPrimaryDosha(prakriti)
     }.getOrDefault("VATA")
 
     private fun extractPrimaryDosha(prakriti: String): String {
@@ -123,21 +118,18 @@ class AnalyticsRepository(private val context: Context) {
         }
     }
 
-    private fun dateOf(row: JsonObject): LocalDate = runCatching {
-        val ts = row["created_at"]?.jsonPrimitive?.content ?: return@runCatching LocalDate.now()
-        LocalDate.parse(ts.take(10))
-    }.getOrDefault(LocalDate.now())
+    private fun dateOf(entity: FoodLogEntity): LocalDate =
+        Instant.ofEpochMilli(entity.createdAt)
+            .atZone(ZoneId.systemDefault())
+            .toLocalDate()
 
-    private fun groupCaloriesByDay(logs: List<JsonObject>): Map<LocalDate, Int> =
+    private fun groupCaloriesByDay(logs: List<FoodLogEntity>): Map<LocalDate, Int> =
         logs.groupBy { dateOf(it) }
-            .mapValues { (_, rows) -> rows.sumOf { it.intOf("calories") } }
+            .mapValues { (_, rows) -> rows.sumOf { it.calories } }
 
-    private fun computeDoshaAlignment(logs: List<JsonObject>, primaryDosha: String): Int {
+    private fun computeDoshaAlignment(logs: List<FoodLogEntity>, primaryDosha: String): Int {
         if (logs.isEmpty()) return 0
-        val matching = logs.count { row ->
-            val tag = row["dosha_tag"]?.jsonPrimitive?.content ?: ""
-            primaryDosha in tag.uppercase()
-        }
+        val matching = logs.count { primaryDosha in it.doshaTag.uppercase() }
         return (matching.toFloat() / logs.size * 100).toInt()
     }
 
@@ -174,10 +166,4 @@ class AnalyticsRepository(private val context: Context) {
         }
         return doshaAdvice + macroNote
     }
-
-    private fun JsonObject.intOf(key: String): Int =
-        this[key]?.jsonPrimitive?.content?.toIntOrNull() ?: 0
-
-    private fun JsonObject.floatOf(key: String): Float =
-        this[key]?.jsonPrimitive?.content?.toFloatOrNull() ?: 0f
 }

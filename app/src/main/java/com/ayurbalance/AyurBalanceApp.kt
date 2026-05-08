@@ -1,10 +1,10 @@
 package com.ayurbalance
 
 import android.app.Application
+import com.ayurbalance.ui.reminders.ReminderNotificationHelper
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.gotrue.Auth
-
 import io.github.jan.supabase.postgrest.Postgrest
 
 /**
@@ -25,6 +25,8 @@ class AyurBalanceApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
+        ReminderNotificationHelper.createChannels(this)
 
         supabaseClient = createSupabaseClient(
             supabaseUrl = "https://tvlfpzwtowijdtmueywt.supabase.co",
